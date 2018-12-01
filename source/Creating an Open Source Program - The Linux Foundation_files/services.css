@@ -1,0 +1,10 @@
+/* Services CSS */
+#single-service-page #page-header-image { background-size: cover }
+#single-service-page h1 { padding-top: 75px; color: #fff; }
+#single-service-page h4 { color: #fff; font-weight: 100; }
+#single-service-page .container-wrap { padding-top: 30px; }
+.single-service { margin-bottom: 20px; }
+.single-service-header { -ms-flex-align: center; align-items: center; display: -ms-flexbox; display: flex; margin-bottom: 20px; }
+.single-service-header h4 { line-height: 22px !important; }
+.single-service-icon { max-width: 50px; }
+.single-service-description p { font-size: 15px !important }

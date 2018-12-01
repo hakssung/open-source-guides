@@ -1,0 +1,121 @@
+(function($){
+	$('.nectar-fancy-box').hover(function(){
+		$(this).parent().addClass('hover-state');
+	}, function(){
+		$(this).parent().removeClass('hover-state');
+	});
+
+
+	$('.event-quick-link').on('change', function() {
+	  window.location = this.value;
+	});
+
+	$('.event-category-select').on('change', function() {
+	  insertParam('category', this.value);
+	});
+
+	$(".events-start-date, .events-end-date").datepicker();
+
+	$('.events-start-date').on('change', function(){
+		if(this.value != ''){
+			$dt = new Date(this.value);
+			insertParam('start_date', $dt.getTime()/1000);
+		} else {
+			insertParam('start_date', '');
+		}
+	});
+
+	$('.events-end-date').on('change', function(){
+		if(this.value != ''){
+			$dt = new Date(this.value);
+			insertParam('end_date', $dt.getTime()/1000);			
+		} else {
+			insertParam('end_date', '');
+		}
+	});
+
+	$('.event-quick-link').select2({
+		theme: "bootstrap"
+	});
+
+	if ($('#event-nav').length > 0) {
+		var navigation = responsiveNav("#event-nav", {
+			insert: "before"
+		});
+		$('#event-nav').parents('.standard_section').css({ "z-index": "99999" });
+		if ($(window).width() < 1000) {
+			// $('#event-nav').parents('.standard_section').css({"position": "fixed", "top": "0", "left": 0});
+		} else {
+			$('#event-nav').parents('.standard_section').css({ "position": "relative" });
+		}
+		$(window).resize(function () {
+			if ($(window).width() < 1000) {
+				// $('#event-nav').parents('.standard_section').css({"position": "fixed", "top": "0", "left": 0});
+			} else {
+				$('#event-nav').parents('.standard_section').css({ "position": "relative" });
+			}
+		});
+	}
+
+	
+	$('.highlight pre').wrapInner('<code></code');
+
+	var owl = $(".owl-carousel");
+	$(".owl-carousel").owlCarousel({
+		loop: true,
+		nav:false,
+		margin:10,
+		items: 4,
+    smartSpeed:450,
+    responsiveClass: true,
+		responsiveRefreshRate : 10,		
+		autoplay:true,
+		autoplayTimeout:2000,
+		autoplayHoverPause:true,
+		dots: false,
+		responsive:{
+			0:{
+					items:1,
+			},
+			600:{
+					items:3,
+			},
+			1000:{
+					items:4,
+			}
+		}	
+	});	
+
+	if ($(".wpml-ls-item-en").length > 0) {
+		$(".wpml-ls-item-en a").attr('href', "https://www.linuxfoundation.org" + window.location.pathname);
+	}
+	
+
+})(jQuery);
+
+function insertParam(key, value){
+    key = encodeURI(key); value = encodeURI(value);
+
+    var kvp = document.location.search.substr(1).split('&');
+    if (kvp == '') {
+        document.location.search = '?' + key + '=' + value;
+    }
+
+    var i=kvp.length; var x; while(i--) 
+    {
+        x = kvp[i].split('=');
+
+        if (x[0]==key)
+        {
+            x[1] = value;
+            kvp[i] = x.join('=');
+            break;
+        }
+    }
+
+    if(i<0) {kvp[kvp.length] = [key,value].join('=');}
+
+    //this will reload the page, it's likely better to store this until finished
+		document.location.search = kvp.join('&'); 
+		
+}

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-3.6.0" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A central open source program office is a designated place where open source is supported, nurtured, shared, explained, and grown inside a company.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T125956Z" creationid="Jang" creationdate="20181201T125956Z">
+        <seg>중앙의 오픈 소스 프로그램 사무소는 회사 내부에서 오픈 소스가 지원, 육성, 공유, 설명 및 성장되는 지정된 장소입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A key problem is that while enterprises develop and follow traditional business plans which dictate their operations and goals, open source software can be baffling.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T132222Z" creationid="Jang" creationdate="20181201T132158Z">
+        <seg>중요한 문제는 기업이 운영 및 목표를 결정하는데 전통적인 비지니스 계획을 개발하고 따르는 반면, 오픈 소스 소프트웨어는 당황스러울 수 있다는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>An open source program office is designed to be the center of the universe for a company’s open source operations and structure, helping to bring all the needed components together.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T153241Z" creationid="Jang" creationdate="20181201T153241Z">
+        <seg>오픈 소스 프로그램 사무소는 회사의 오픈 소스 운영 및 구조를 위한 모든 세상의 중심이되도록 설계되어 필요한 모든 구성 요소를 함께 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>By creating an open source program office, businesses can enable, streamline and organize the use of open source in ways that tie it directly to a company’s long-term business plans.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152901Z" creationid="Jang" creationdate="20181201T152901Z">
+        <seg>오픈 소스 프로그램 사무소를 신설함으로, 기업은 회사의 장기 사업 계획에 직접 연계하는 방식으로 오픈 소스 사용을 가능하게하고 합리화 및 조직 할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Contents</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131036Z" creationid="Jang" creationdate="20181201T131036Z">
+        <seg>목차</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Creating an Open Source Program</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152919Z" creationid="Jang" creationdate="20181201T125541Z">
+        <seg>오픈 소스 프로그램 신설</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Creating an Open Source Program - The Linux Foundation</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152907Z" creationid="Jang" creationdate="20181201T125017Z">
+        <seg>오픈 소스 프로그램 신설 -  Linux Foundation</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Establishing an open source office</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131256Z" creationid="Jang" creationdate="20181201T131256Z">
+        <seg>오픈 소스 사무소 설립</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Example: Open source at Google</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131217Z" creationid="Jang" creationdate="20181201T131217Z">
+        <seg>예: 구글의 오픈 소스</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Final words</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131529Z" creationid="Jang" creationdate="20181201T131529Z">
+        <seg>덧붙이는 말</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>For many businesses, the needed change in philosophy when approaching open source use doesn’t come easily or naturally.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152428Z" creationid="Jang" creationdate="20181201T152428Z">
+        <seg>많은 기업들이 오픈 소스 사용에 접근 할 때 필요한 철학의 변화는 쉽거나 자연스럽게 이루어지지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If a company wants to increase its influence, clarify its open source messaging, maximize the clout of its projects, or increase the efficiency of its product development, a multifaceted approach to open source programs is essential.”</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T153923Z" creationid="Jang" creationdate="20181201T153923Z">
+        <seg>회사가 영향력을 높이거나 오픈 소스 메시징을 명확히하거나 프로젝트의 영향력을 극대화하거나, 제품 개발의 효율성을 높이려면, 오픈 소스 프로그램에 대한 다각적인 접근이 필수적입니다. "</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>It will cover topics for open source offices including: roles and responsibilities, corporate structures, elements of an open source management program, how to choose and hire an open source program manager, and more.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T130921Z" creationid="Jang" creationdate="20181201T130921Z">
+        <seg>여기에는 다음과 같은 오픈 소스 사무소에 대한 주제를 다룹니다 : 역할 및 책임, 기업 구조, 오픈 소스 관리 프로그램의 요소, 오픈 소스 프로그램 관리자를 선택하고 고용하는 방법 등</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Job listing template</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131619Z" creationid="Jang" creationdate="20181201T131619Z">
+        <seg>구인 정보 템플릿</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Learn how to build a program to manage open source use and creation inside your company.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152914Z" creationid="Jang" creationdate="20181201T125216Z">
+        <seg>회사 내에서 오픈 소스 사용 및 신설을 관리하는 프로그램 구축 방법 알아보기</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Management roles</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131328Z" creationid="Jang" creationdate="20181201T131328Z">
+        <seg>관리 역할</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>One of its biggest differences is that open source development is collaborative, while traditional software and business practices are proprietary and closed.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152249Z" creationid="Jang" creationdate="20181201T152249Z">
+        <seg>가장 큰 차이점 중 하나는 오픈 소스 개발은 공동 작업이며, 전통적인 소프트웨어 및 비즈니스 방식은 독점적이며 폐쇄적이라는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Open Source Guides</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T125445Z" creationid="Jang" creationdate="20181201T125445Z">
+        <seg>오픈 소스 가이드</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Open source innovation has a methodology of its own and doesn’t follow traditional business processes.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152125Z" creationid="Jang" creationdate="20181201T152125Z">
+        <seg>오픈 소스 혁신은 자체적인 방법론을 가지고 있으며 전통적인 비즈니스 프로세스를 따르지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Open source software is widely used today by companies in a broad range of industries from retail to finance to automotive, and more, but it’s not always fully understood by the executive leaders and decision-makers running the operations.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131914Z" creationid="Jang" creationdate="20181201T131914Z">
+        <seg>오픈 소스 소프트웨어는 오늘날 소매업에서 금융, 자동차 산업에 이르는 광범위한 산업 분야의 기업에서 널리 사용되고 있지만, 경영진 및 의사 결정권자가 항상 완전히 이해하는 것은 아닙니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Program structure</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131312Z" creationid="Jang" creationdate="20181201T131312Z">
+        <seg>프로그램 구조</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Role of an open source program office</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131154Z" creationid="Jang" creationdate="20181201T131154Z">
+        <seg>오픈 소스 프로그램 사무소의 역할</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Setting policy and processes</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131353Z" creationid="Jang" creationdate="20181201T131353Z">
+        <seg>정책 및 프로세스 설정</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>That’s where the creation of an open source program can be a major boon.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152611Z" creationid="Jang" creationdate="20181201T152611Z">
+        <seg>여기가 오픈 소스 프로그램을 만드는 것이 중요한 이점이 될 수 있는 곳입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The Linux Foundation</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T125227Z" creationid="Jang" creationdate="20181201T125227Z">
+        <seg>Linux Foundation</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The office can also provide advocacy and communications about all things open source inside and outside the company.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T153539Z" creationid="Jang" creationdate="20181201T153539Z">
+        <seg>사무소는 또한 회사 내부와 외부의 모든 오픈 소스에 대한 지지와 커뮤니케이션을 제공 할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This can include setting code use, distribution, selection, auditing and other policies, as well as training developers, ensuring legal compliance and promoting and building community engagement.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T153500Z" creationid="Jang" creationdate="20181201T153500Z">
+        <seg>여기에는 코드 사용, 배포, 선택, 감사 및 기타 정책 뿐만 아니라, 개발자 교육, 법적 컴플라이언스 보장, 커뮤니티 참여 촉진 및 구축이 포함될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This guide was created to help you figure out why and how to establish a program to manage the open source use and creation inside your company, as well as to show how your developers can make their own contributions to open source projects outside your operations.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T152925Z" creationid="Jang" creationdate="20181201T130654Z">
+        <seg>이 가이드는 회사 내에서 오픈 소스 사용 및 신설을 관리하는 프로그램을 구축하는 이유와 방법을 파악하는데 도움이 될 뿐만 아니라, 개발자가 회사 밖의 오픈 소스 프로젝트에 어떻게 기여할 수 있는지 보여주기 위해 작성되었습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Why create an open source program office</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T131130Z" creationid="Jang" creationdate="20181201T131130Z">
+        <seg>오픈 소스 프로그램 사무소를 만드는 이유</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>With such an office in place, businesses can establish and execute on their open source strategies in clear terms, giving their leaders, developers, marketers, and other staff the tools they need to make open source a success within their operations.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T130412Z" creationid="Jang" creationdate="20181201T130412Z">
+        <seg>이러한 사무소를 통해 기업은 오픈 소스 전략을 명확한 방식으로 수립하고 실행할 수 있으며, 리더, 개발자, 마케팅 담당자 및 기타 직원에게 각자의 환경에서 오픈 소스를 성공적으로 만드는데 필요한 도구를 제공 할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>summary</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T125233Z" creationid="Jang" creationdate="20181201T125233Z">
+        <seg>요약</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>“The open source program office is an <bpt i="0" x="0">&lt;a0&gt;</bpt>essential part of any modern company<ept i="0">&lt;/a0&gt;</ept> with a reasonably ambitious plan to influence various sectors of software ecosystems.</seg>
+      </tuv>
+      <tuv xml:lang="KO" changeid="Jang" changedate="20181201T153719Z" creationid="Jang" creationdate="20181201T153719Z">
+        <seg>"오픈 소스 프로그램 사무소는 소프트웨어 생태계의 다양한 부문에 영향을 주고자하는 상당히 야심찬 계획을 가진 모든 현대 회사의 필수적인 부분입니다.</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>

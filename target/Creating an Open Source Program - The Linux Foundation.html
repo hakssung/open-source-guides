@@ -1,0 +1,1515 @@
+<!DOCTYPE html><!-- saved from url=(0093)https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/ -->
+
+<html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec" prefix="og: http://ogp.me/ns#" class="js applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange audio canvas canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg csspositionsticky hsla supports svgclippaths smil fontface generatedcontent textshadow indexeddb indexeddb-deletedatabase cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions js_active  vc_desktop  vc_transform  vc_transform"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/c1e441369e"></script><!-- Meta Tags -->
+
+
+<script id="twitter-wjs" src="./Creating an Open Source Program - The Linux Foundation_files/widgets.js.다운로드"></script><!--Shortcut icon-->
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+	
+
+
+	<link rel="shortcut icon" href="https://www.linuxfoundation.org/wp-content/uploads/2017/08/favicon.png">
+
+<title>오픈 소스 프로그램 신설 -  Linux Foundation</title><!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<link rel="alternate" hreflang="en-us" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/">
+<link rel="alternate" hreflang="ja" href="https://www.linuxfoundation.jp/resources/open-source-guides/creating-an-open-source-program/">
+<link rel="alternate" hreflang="zh-cn" href="https://linuxfoundation.cn/resources/open-source-guides/creating-an-open-source-program/">
+
+
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+
+	var gtm4wp_scrollerscript_debugmode         = false;
+	var gtm4wp_scrollerscript_callbacktime      = 100;
+	var gtm4wp_scrollerscript_readerlocation    = 150;
+	var gtm4wp_scrollerscript_contentelementid  = "content";
+	var gtm4wp_scrollerscript_scannertime       = 60;
+//]]>
+</script><!-- End Google Tag Manager for WordPress by gtm4wp.com --><!-- This site is optimized with the Yoast SEO plugin v9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+
+
+<meta name="description" content="회사 내에서 오픈 소스 사용 및 신설을 관리하는 프로그램 구축 방법 알아보기">
+<link rel="canonical" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="오픈 소스 프로그램 신설 -  Linux Foundation">
+<meta property="og:description" content="회사 내에서 오픈 소스 사용 및 신설을 관리하는 프로그램 구축 방법 알아보기">
+<meta property="og:url" content="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/">
+<meta property="og:site_name" content="Linux Foundation">
+<meta property="article:publisher" content="https://www.facebook.com/TheLinuxFoundation">
+<meta property="og:image" content="https://linuxfoundation.org/wp-content/uploads/2017/08/thumb_cra.png">
+<meta property="og:image:secure_url" content="https://linuxfoundation.org/wp-content/uploads/2017/08/thumb_cra.png">
+<meta name="twitter:card" content="요약">
+<meta name="twitter:description" content="회사 내에서 오픈 소스 사용 및 신설을 관리하는 프로그램 구축 방법 알아보기">
+<meta name="twitter:title" content="오픈 소스 프로그램 신설 -  Linux Foundation">
+<meta name="twitter:site" content="@linuxfoundation">
+<meta name="twitter:image" content="https://linuxfoundation.org/wp-content/uploads/2017/08/thumb_cra.png">
+<meta name="twitter:creator" content="@linuxfoundation">
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.linuxfoundation.org\/","sameAs":["https:\/\/www.facebook.com\/TheLinuxFoundation","https:\/\/www.linkedin.com\/company\/208777","https:\/\/www.youtube.com\/user\/TheLinuxFoundation","https:\/\/twitter.com\/linuxfoundation"],"@id":"https:\/\/www.linuxfoundation.org\/#organization","name":"The Linux Foundation","logo":"http:\/\/live-lforg.pantheonsite.io\/wp-content\/uploads\/2017\/06\/LF_logo_NEW_H_Pantone.png"}</script><!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://www.linuxfoundation.org/">
+<link rel="dns-prefetch" href="https://s7.addthis.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="The Linux Foundation » Feed" href="https://www.linuxfoundation.org/feed/">
+<link rel="alternate" type="text/calendar" title="The Linux Foundation » iCal Feed" href="https://www.linuxfoundation.org/calendars/?ical=1">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.linuxfoundation.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style><!--[if lt IE 9]>
+<link rel='stylesheet' id='nectar-ie8-css'  href='https://www.linuxfoundation.org/wp-content/themes/salient/css/ie8.css?ver=4.9.8' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="cookie-law-info-css" href="./Creating an Open Source Program - The Linux Foundation_files/cookie-law-info-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="cookie-law-info-gdpr-css" href="./Creating an Open Source Program - The Linux Foundation_files/cookie-law-info-gdpr.css" type="text/css" media="all">
+<link rel="stylesheet" id="ctf_styles-css" href="./Creating an Open Source Program - The Linux Foundation_files/ctf-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="linux-foundation-css" href="./Creating an Open Source Program - The Linux Foundation_files/linux-foundation-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpml-menu-item-0-css" href="./Creating an Open Source Program - The Linux Foundation_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="./Creating an Open Source Program - The Linux Foundation_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="featherlight-style-css" href="./Creating an Open Source Program - The Linux Foundation_files/featherlight.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-ui-css" href="./Creating an Open Source Program - The Linux Foundation_files/jquery-ui.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="select2-bootstrap-css" href="./Creating an Open Source Program - The Linux Foundation_files/select2-bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="select2-css" href="./Creating an Open Source Program - The Linux Foundation_files/select2.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-nav-css" href="./Creating an Open Source Program - The Linux Foundation_files/responsive-nav.css" type="text/css" media="all">
+<link rel="stylesheet" id="owl-style-css" href="./Creating an Open Source Program - The Linux Foundation_files/owl.carousel.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="owl-default-style-css" href="./Creating an Open Source Program - The Linux Foundation_files/owl.theme.default.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="parent-style-css" href="./Creating an Open Source Program - The Linux Foundation_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="members-css-css" href="./Creating an Open Source Program - The Linux Foundation_files/members.css" type="text/css" media="all">
+<link rel="stylesheet" id="services-css-css" href="./Creating an Open Source Program - The Linux Foundation_files/services.css" type="text/css" media="all">
+<link rel="stylesheet" id="persons-css-css" href="./Creating an Open Source Program - The Linux Foundation_files/persons.css" type="text/css" media="all">
+<link rel="stylesheet" id="projects-css-css" href="./Creating an Open Source Program - The Linux Foundation_files/projects.css" type="text/css" media="all">
+<link rel="stylesheet" id="webinar-css-css" href="./Creating an Open Source Program - The Linux Foundation_files/webinars.css" type="text/css" media="all">
+<link rel="stylesheet" id="rgs-css" href="./Creating an Open Source Program - The Linux Foundation_files/rgs.css" type="text/css" media="all">
+<link rel="stylesheet" id="main-styles-css" href="./Creating an Open Source Program - The Linux Foundation_files/style(2).css" type="text/css" media="all">
+<link rel="stylesheet" id="magnific-css" href="./Creating an Open Source Program - The Linux Foundation_files/magnific.css" type="text/css" media="all">
+
+<link rel="stylesheet" id="responsive-css" href="./Creating an Open Source Program - The Linux Foundation_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="skin-ascend-css" href="./Creating an Open Source Program - The Linux Foundation_files/ascend.css" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="./Creating an Open Source Program - The Linux Foundation_files/js_composer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="addthis_all_pages-css" href="./Creating an Open Source Program - The Linux Foundation_files/addthis_wordpress_public.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="redux-google-fonts-salient_redux-css" href="./Creating an Open Source Program - The Linux Foundation_files/css(1)" type="text/css" media="all">
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/jquery.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/jquery-migrate.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/jquery.cookie.js.다운로드"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpml_cookies = {"_icl_current_language":{"value":"en","expires":1,"path":"\/"}};
+var wpml_cookies = {"_icl_current_language":{"value":"en","expires":1,"path":"\/"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/language-cookie.js.다운로드"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[]};
+var log_object = {"ajax_url":"https:\/\/www.linuxfoundation.org\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/cookie-law-info-public.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/gtm4wp-form-move-tracker.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/gtm4wp-social-tracker.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/gtm4wp-youtube.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/analytics-talk-content-tracking.js.다운로드"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpml_xdomain_data = {"css_selector":"wpml-ls-item","ajax_url":"https:\/\/www.linuxfoundation.org\/wp-admin\/admin-ajax.php","current_lang":"en"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/xdomain-data.js.다운로드"></script><!-- Stream WordPress user activity plugin v3.2.3 --><!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<link rel="https://api.w.org/" href="https://www.linuxfoundation.org/wp-json/">
+<meta name="generator" content="WordPress 4.9.8">
+<link rel="shortlink" href="https://www.linuxfoundation.org/?p=20371">
+<link rel="alternate" type="application/json+oembed" href="https://www.linuxfoundation.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.linuxfoundation.org%2Fresources%2Fopen-source-guides%2Fcreating-an-open-source-program%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.linuxfoundation.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.linuxfoundation.org%2Fresources%2Fopen-source-guides%2Fcreating-an-open-source-program%2F&amp;format=xml">
+<meta name="generator" content="WPML ver:4.0.8 stt:60,1,28;">
+
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.linuxfoundation.org"><link rel="https://theeventscalendar.com/" href="https://www.linuxfoundation.org/wp-json/tribe/events/v1/">
+
+<script data-cfasync="false" type="text/javascript">//<![CDATA[var google_tag_params = {"pageTitle":"Creating an Open Source Program - The Linux Foundation","pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Alex Contini","pagePostDate":"September 11, 2017","pagePostDateYear":"2017","pagePostDateMonth":"09","pagePostDateDay":"11","browserName":"Chrome","browserVersion":"70.0.3538.110","browserEngineName":"Blink","browserEngineVersion":"","osName":"Windows","osVersion":"6.1","deviceType":"desktop","deviceManufacturer":"","deviceModel":""};
+	dataLayer.push({"visitorLoginState":"logged-out","visitorType":"visitor-logged-out","pageTitle":"Creating an Open Source Program - The Linux Foundation","pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Alex Contini","pagePostDate":"September 11, 2017","pagePostDateYear":"2017","pagePostDateMonth":"09","pagePostDateDay":"11","browserName":"Chrome","browserVersion":"70.0.3538.110","browserEngineName":"Blink","browserEngineVersion":"","osName":"Windows","osVersion":"6.1","deviceType":"desktop","deviceManufacturer":"","deviceModel":"","google_tag_params":window.google_tag_params});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WWBXMJK');//]]>
+</script><!-- End Google Tag Manager --><!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+
+<script type="text/javascript"> var root = document.getElementsByTagName( "html" )[0]; root.setAttribute( "class", "js" ); </script><!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.linuxfoundation.org/wp-content/plugins/js_composer_salient/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+		<script type="text/javascript">
+			var cli_flush_cache=2;
+		</script>
+				<style type="text/css" id="wp-custom-css">
+			/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+
+#pardot-form {
+
+color:#ffffff !important;
+
+}
+
+@media (min-width: 1000px) {
+
+
+#single-service-page #page-header-image{
+
+height: 350px !important;
+
+
+}
+
+.page .page-wrap .content-wrapper{
+  padding-top: 0px !important;
+}
+
+#main { padding-bottom: 0px !important; }
+
+body[data-bg-header="true"] .container-wrap, html.fp-enabled .container-wrap {
+
+padding-bottom:0px !important;
+
+}
+
+
+
+}		</style>
+	<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+ 
+
+<style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_google_plusone,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.at-share-tbx-element .google_plusone_iframe_widget>span>div{vertical-align:top!important}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:40px}.body .wsb-social-share.addthis_counter_style .addthis_button_google_plusone.wsb-social-share-button{padding-top:0}.body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button{padding-top:21px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style></head>
+
+
+<body class="page-template-default page page-id-20371 page-child parent-pageid-13070 tribe-js ascend nectar-auto-lightbox wpb-js-composer js-comp-ver-5.4.7 vc_responsive" data-footer-reveal="false" data-header-format="default" data-boxed-style="" data-header-breakpoint="1000" data-footer-reveal-shadow="none" data-dropdown-style="classic" data-cae="easeOutCubic" data-megamenu-width="contained" data-cad="650" data-aie="none" data-ls="magnific" data-apte="standard" data-hhun="0" data-fancy-form-rcs="default" data-form-style="default" data-form-submit="regular" data-is="minimal" data-button-style="default" data-header-inherit-rc="false" data-header-search="true" data-animated-anchors="true" data-ajax-transitions="false" data-full-width-header="true" data-slide-out-widget-area="false" data-slide-out-widget-area-style="slide-out-from-right" data-user-set-ocm="off" data-loading-animation="none" data-bg-header="false" data-ext-responsive="true" data-header-resize="1" data-header-color="custom" data-transparent-header="false" data-cart="false" data-smooth-scrolling="0" data-permanent-transparent="false" data-responsive="1">
+
+<div id="ajax-loading-screen" data-disable-fade-on-click="0" data-effect="standard" data-method="ajax"><div class="loading-icon none"><span class="default-loading-icon spin"></span></div></div> <div id="header-space" data-header-mobile-fixed="false" style="height: 97px;"></div> 
+<div id="header-outer" data-has-menu="true" data-using-pr-menu="false" data-mobile-fixed="false" data-ptnm="false" data-lhe="default" data-user-set-bg="#0a3b61" data-format="default" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="0" data-cart="false" data-transparency-option="0" data-box-shadow="small" data-shrink-num="6" data-full-width="true" data-using-secondary="0" data-using-logo="1" data-logo-height="20" data-m-logo-height="13" data-padding="28" data-header-resize="1" style="padding-top: 28px;" class="">
+	
+		
+	<header id="top">
+		
+		<div class="container" style="visibility: visible;">
+			
+			<div class="row">
+				  
+				<div class="col span_3">
+					
+					<a id="logo" href="https://www.linuxfoundation.org/">
+
+						<img class="stnd default-logo" alt="Linux Foundation" src="./Creating an Open Source Program - The Linux Foundation_files/LF_logo_NEW_H_W.png" srcset="https://www.linuxfoundation.org/wp-content/uploads/2017/06/LF_logo_NEW_H_W.png 1x, https://www.linuxfoundation.org/wp-content/uploads/2017/06/LF_logo_NEW_H_W.png 2x" style="height: 20px;"> 
+
+					</a>
+
+				</div><!--/span_3-->
+				
+				<div class="col span_9 col_last">
+					
+											<div class="slide-out-widget-area-toggle mobile-icon std-menu slide-out-from-right" data-icon-animation="simple-transform">
+							<div> <a id="toggle-nav" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#sidewidgetarea" class="closed"> <span> <i class="lines-button x2"> <i class="lines"></i> </i> </span> </a> </div> 
+       					</div>
+										
+					
+					<nav>
+
+						
+
+													<ul class="buttons" data-user-set-ocm="off" style="margin-top: -28px; height: 75px;">
+
+								
+																	<li id="search-btn" style="padding-top: 0px; padding-bottom: 0px;"><div><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#searchbox" style="visibility: visible; padding-top: 26px; padding-bottom: 26px;"><span class="icon-salient-search" aria-hidden="true"></span></a></div> </li>
+								
+
+															</ul>
+						
+													<ul class="sf-menu sf-js-enabled sf-arrows">	
+								<li id="menu-item-31599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31599"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#" class="sf-with-ul" style="padding-bottom: 27px; padding-top: 0px;">Projects</a>
+<ul class="sub-menu" style="display: none; top: 48px;">
+	<li id="menu-item-1456" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1456"><a href="https://www.linuxfoundation.org/projects/">All Projects</a></li>
+	<li id="menu-item-33623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33623"><a href="https://www.linuxfoundation.org/projects/hosting/">Hosting a Project</a></li>
+	<li id="menu-item-1579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1579"><a href="https://www.linuxfoundation.org/projects/services/">Services</a></li>
+	<li id="menu-item-5629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://www.linuxfoundation.org/projects/directory/">Directory</a></li>
+	<li id="menu-item-31477" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31477"><a href="https://www.linuxfoundation.org/projects/cloud/">Cloud &amp; Containers</a></li>
+	<li id="menu-item-45081" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45081"><a href="https://deeplearningfoundation.org/">Deep Learning</a></li>
+	<li id="menu-item-27629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27629"><a href="https://www.linuxfoundation.org/projects/networking/">Networking</a></li>
+	<li id="menu-item-33217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33217"><a href="https://www.linuxfoundation.org/projects/security-compliance/">Security &amp; Compliance</a></li>
+	<li id="menu-item-1457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1457"><a href="https://www.linuxfoundation.org/projects/case-studies/">Case Studies</a></li>
+</ul>
+</li>
+<li id="menu-item-31597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31597"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#" class="sf-with-ul" style="padding-bottom: 27px; padding-top: 0px;">Membership</a>
+<ul class="sub-menu" style="display: none; top: 48px;">
+	<li id="menu-item-2731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2731"><a href="https://www.linuxfoundation.org/membership/">Benefits</a></li>
+	<li id="menu-item-5891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5891"><a href="https://www.linuxfoundation.org/membership/members/">Corporate Members</a></li>
+	<li id="menu-item-6611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6611"><a href="https://www.linuxfoundation.org/membership/individual/">Individual Supporters</a></li>
+</ul>
+</li>
+<li id="menu-item-20047" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20047"><a href="http://events.linuxfoundation.org/" style="padding-bottom: 27px; padding-top: 0px;">Events</a></li>
+<li id="menu-item-2732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2732"><a target="_blank" href="http://training.linuxfoundation.org/" style="padding-bottom: 27px; padding-top: 0px;">Training</a></li>
+<li id="menu-item-31600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31600"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#" class="sf-with-ul" style="padding-bottom: 27px; padding-top: 0px;">Resources</a>
+<ul class="sub-menu" style="display: none; top: 48px;">
+	<li id="menu-item-6844" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6844"><a href="https://www.linuxfoundation.org/resources/publications/">Publications</a></li>
+	<li id="menu-item-21198" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-21198"><a href="https://www.linuxfoundation.org/resources/open-source-guides/">오픈 소스 가이드</a></li>
+	<li id="menu-item-6517" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6517"><a href="https://www.linuxfoundation.org/resources/webinars/">Webinars</a></li>
+</ul>
+</li>
+<li id="menu-item-31846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31846"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#" class="sf-with-ul" style="padding-bottom: 27px; padding-top: 0px;">Newsroom</a>
+<ul class="sub-menu" style="display: none; top: 48px;">
+	<li id="menu-item-31847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31847"><a href="https://www.linuxfoundation.org/newsroom/">All News</a></li>
+	<li id="menu-item-1447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1447"><a href="https://www.linuxfoundation.org/newsroom/press/">News Releases</a></li>
+	<li id="menu-item-20049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20049"><a href="https://www.linuxfoundation.org/newsroom/media-coverage/">Media Coverage</a></li>
+	<li id="menu-item-6845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6845"><a href="https://www.linuxfoundation.org/newsroom/blog/">Blog</a></li>
+	<li id="menu-item-12289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12289"><a href="https://www.linuxfoundation.org/newsroom/newsletter/">Newsletter</a></li>
+</ul>
+</li>
+<li id="menu-item-31602" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31602"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#" class="sf-with-ul" style="padding-bottom: 27px; padding-top: 0px;">About</a>
+<ul class="sub-menu" style="display: none; top: 48px;">
+	<li id="menu-item-1441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1441"><a href="https://www.linuxfoundation.org/about/">The Foundation</a></li>
+	<li id="menu-item-2733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2733"><a href="https://www.linuxfoundation.org/about/board-members/">Board Members</a></li>
+	<li id="menu-item-1444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1444"><a href="https://www.linuxfoundation.org/about/leadership/">Leadership</a></li>
+	<li id="menu-item-6650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6650"><a href="https://www.linuxfoundation.org/about/linux-foundation-fellows/">Fellows</a></li>
+	<li id="menu-item-13398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13398"><a href="https://www.linuxfoundation.org/about/technical-advisory-board/">Technical Advisory Board</a></li>
+	<li id="menu-item-26885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26885"><a href="https://www.linuxfoundation.org/about/donate/">Donate</a></li>
+	<li id="menu-item-1442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1442"><a href="https://www.linuxfoundation.org/about/diversity-inclusiveness/">Diversity and Inclusiveness</a></li>
+	<li id="menu-item-20194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20194"><a href="https://www.linuxfoundation.org/about/careers/">Careers</a></li>
+	<li id="menu-item-1443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1443"><a href="https://www.linuxfoundation.org/about/contact/">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-wpml-ls-7-ja" class="menu-item wpml-ls-slot-7 wpml-ls-item wpml-ls-item-ja wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-7-ja"><a href="https://www.linuxfoundation.jp/resources/open-source-guides/creating-an-open-source-program/" style="padding-bottom: 27px; padding-top: 0px;"><img class="wpml-ls-flag" src="./Creating an Open Source Program - The Linux Foundation_files/jp.gif" alt="ja" title="日本語"></a></li>
+<li id="menu-item-wpml-ls-7-zh-hans" class="menu-item wpml-ls-slot-7 wpml-ls-item wpml-ls-item-zh-hans wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-7-zh-hans"><a href="https://linuxfoundation.cn/resources/open-source-guides/creating-an-open-source-program/" style="padding-bottom: 27px; padding-top: 0px;"><img class="wpml-ls-flag" src="./Creating an Open Source Program - The Linux Foundation_files/php9Pwkhb (2).png" alt="zh-hans" title="简体中文"></a></li>
+<li id="social-in-menu" class="button_social_group"><a target="_blank" href="https://twitter.com/linuxfoundation" style="margin-bottom: 26.5px; margin-top: -1.5px;"><i class="fa fa-twitter"></i> </a><a target="_blank" href="https://www.facebook.com/TheLinuxFoundation" style="margin-bottom: 26.5px; margin-top: -1.5px;"><i class="fa fa-facebook"></i> </a><a target="_blank" href="https://www.linkedin.com/company/208777" style="margin-bottom: 26.5px; margin-top: -1.5px;"><i class="fa fa-linkedin"></i> </a><a target="_blank" href="https://www.youtube.com/user/TheLinuxFoundation" style="margin-bottom: 26.5px; margin-top: -1.5px;"><i class="fa fa-youtube-play"></i> </a><a target="_blank" href="https://plus.google.com/+LinuxfoundationOrg" style="margin-bottom: 26.5px; margin-top: -1.5px;"><i class="fa fa-google-plus"></i> </a></li>							</ul>
+											</nav>
+
+					
+										
+				</div><!--/span_9-->
+
+				
+			</div><!--/row-->
+			
+		</div><!--/container-->
+		
+	</header>
+	
+	
+			
+	
+
+</div><!--/header-outer-->
+
+
+
+<div id="search-outer" class="nectar" style="top: 97px;">
+		
+	<div id="search">
+	  	 
+		<div class="container" style="height: 76px;">
+		  	 	
+		     <div id="search-box" style="top: 339.5px;">
+		     	
+		     	<div class="inner-wrap">
+
+			     	<div class="col span_12">
+				      	<form action="https://www.linuxfoundation.org/" method="GET">
+				      		 
+				      			<input type="text" name="s" value="Start Typing..." data-placeholder="Start Typing...">
+				      						      	</form>
+								
+				      	<span><i>Press enter to begin your search</i></span>			        </div><!--/span_12-->
+
+			    </div><!--/inner-wrap-->
+			      
+		     </div><!--/search-box-->
+		     
+		     <div id="close"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#">
+		     	<span class="icon-salient-x" aria-hidden="true"></span>		     	</a></div>
+		     
+		 </div><!--/container-->
+	    
+	</div><!--/search-->
+	  
+</div><!--/search-outer--> 
+
+
+	<div id="mobile-menu" data-mobile-fixed="false" style="display: none;">
+		
+		<div class="container">
+			<ul>
+				<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31599 has-ul"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#">Projects<span class="sf-sub-indicator" style="height: 22px;"><i class="icon-angle-down"></i></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1456"><a href="https://www.linuxfoundation.org/projects/">All Projects</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33623"><a href="https://www.linuxfoundation.org/projects/hosting/">Hosting a Project</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1579"><a href="https://www.linuxfoundation.org/projects/services/">Services</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5629"><a href="https://www.linuxfoundation.org/projects/directory/">Directory</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31477"><a href="https://www.linuxfoundation.org/projects/cloud/">Cloud &amp; Containers</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45081"><a href="https://deeplearningfoundation.org/">Deep Learning</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27629"><a href="https://www.linuxfoundation.org/projects/networking/">Networking</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33217"><a href="https://www.linuxfoundation.org/projects/security-compliance/">Security &amp; Compliance</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1457"><a href="https://www.linuxfoundation.org/projects/case-studies/">Case Studies</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31597 has-ul"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#">Membership<span class="sf-sub-indicator" style="height: 22px;"><i class="icon-angle-down"></i></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2731"><a href="https://www.linuxfoundation.org/membership/">Benefits</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5891"><a href="https://www.linuxfoundation.org/membership/members/">Corporate Members</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6611"><a href="https://www.linuxfoundation.org/membership/individual/">Individual Supporters</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20047"><a href="http://events.linuxfoundation.org/">Events</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2732"><a target="_blank" href="http://training.linuxfoundation.org/">Training</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31600 has-ul"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#">Resources<span class="sf-sub-indicator" style="height: 22px;"><i class="icon-angle-down"></i></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6844"><a href="https://www.linuxfoundation.org/resources/publications/">Publications</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-21198"><a href="https://www.linuxfoundation.org/resources/open-source-guides/">오픈 소스 가이드</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6517"><a href="https://www.linuxfoundation.org/resources/webinars/">Webinars</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31846 has-ul"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#">Newsroom<span class="sf-sub-indicator" style="height: 22px;"><i class="icon-angle-down"></i></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31847"><a href="https://www.linuxfoundation.org/newsroom/">All News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1447"><a href="https://www.linuxfoundation.org/newsroom/press/">News Releases</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20049"><a href="https://www.linuxfoundation.org/newsroom/media-coverage/">Media Coverage</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6845"><a href="https://www.linuxfoundation.org/newsroom/blog/">Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12289"><a href="https://www.linuxfoundation.org/newsroom/newsletter/">Newsletter</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31602 has-ul"><a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#">About<span class="sf-sub-indicator" style="height: 22px;"><i class="icon-angle-down"></i></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1441"><a href="https://www.linuxfoundation.org/about/">The Foundation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2733"><a href="https://www.linuxfoundation.org/about/board-members/">Board Members</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1444"><a href="https://www.linuxfoundation.org/about/leadership/">Leadership</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6650"><a href="https://www.linuxfoundation.org/about/linux-foundation-fellows/">Fellows</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13398"><a href="https://www.linuxfoundation.org/about/technical-advisory-board/">Technical Advisory Board</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26885"><a href="https://www.linuxfoundation.org/about/donate/">Donate</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1442"><a href="https://www.linuxfoundation.org/about/diversity-inclusiveness/">Diversity and Inclusiveness</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20194"><a href="https://www.linuxfoundation.org/about/careers/">Careers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1443"><a href="https://www.linuxfoundation.org/about/contact/">Contact Us</a></li>
+</ul>
+</li>
+<li class="menu-item wpml-ls-slot-7 wpml-ls-item wpml-ls-item-ja wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-7-ja"><a href="https://www.linuxfoundation.jp/resources/open-source-guides/creating-an-open-source-program/"><img class="wpml-ls-flag" src="./Creating an Open Source Program - The Linux Foundation_files/jp.gif" alt="ja" title="日本語"></a></li>
+<li class="menu-item wpml-ls-slot-7 wpml-ls-item wpml-ls-item-zh-hans wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-7-zh-hans"><a href="https://linuxfoundation.cn/resources/open-source-guides/creating-an-open-source-program/"><img class="wpml-ls-flag" src="./Creating an Open Source Program - The Linux Foundation_files/php9Pwkhb (2).png" alt="zh-hans" title="简体中文"></a></li>
+<li id="mobile-search">  
+						<form action="https://www.linuxfoundation.org/" method="GET">
+				      		<input type="text" name="s" value="" placeholder="Search..">
+						</form> 
+						</li>		
+			</ul>
+		</div>
+		
+	</div>
+
+
+<div id="ajax-content-wrap" class="at-content">
+
+
+
+<div class="container-wrap" style="opacity: 1;">
+	
+	<div class="container main-content">
+		
+		<div class="row">
+			
+			<div class="at-above-post-page addthis_tool" data-url="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/"></div>
+		<div id="fws_5c0280fc214b9" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row full-width-section standard_section   " style="padding: 150px 90px; margin-left: -90px; visibility: visible;"><div class="row-bg-wrap instance-0"><div class="inner-wrap"> <div class="row-bg  using-bg-color  " style="background-color: #264860; " data-color_overlay="#264860" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.8" data-enable_gradient="false"></div></div> </div><div class="col span_12 light left">
+	<div class="vc_col-sm-2 wpb_column column_container vc_column_container col no-extra-padding instance-0" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"></p><div class="nectar_icon_wrap"><!--?xml version="1.0" encoding="utf-8"?--><!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><span class="svg-icon-holder bound animated-in" data-size="" data-animation-speed="150" data-animation="true" data-animation-delay="150" data-color="extra-color-2" style="opacity: 1;"><span>
+
+
+<svg version="1.1" id="nectar-svg-animation-instance-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="46" height="62" d="M1 1 L47 1 L47 63 L1 63 Z" style="stroke-dasharray: 216, 218; stroke-dashoffset: 0;"></path>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M9,63L9,2" style="stroke-dasharray: 61, 63; stroke-dashoffset: 0;"></path>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M14,15L42,15" style="stroke-dasharray: 28, 30; stroke-dashoffset: 0;"></path>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M14,21L42,21" style="stroke-dasharray: 28, 30; stroke-dashoffset: 0;"></path>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M63,3L63,53L59,61L55,53L55,3Z" style="stroke-dasharray: 126, 128; stroke-dashoffset: 0;"></path>
+<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55,7L51,7L51,17" style="stroke-dasharray: 14, 16; stroke-dashoffset: 0;"></path>
+</svg>
+</span></span></div>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-10 wpb_column column_container vc_column_container col no-extra-padding instance-1" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h1><span style="font-weight: 400;">오픈 소스 프로그램 신설 </span></h1>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc21ffd" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 75px; padding-bottom: 0px; "><div class="row-bg-wrap instance-1"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-8 wpb_column column_container vc_column_container col padding-7-percent instance-2" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>중앙의 오픈 소스 프로그램 사무소는 회사 내부에서 오픈 소스가 지원, 육성, 공유, 설명 및 성장되는 지정된 장소입니다. 이러한 사무소를 통해 기업은 오픈 소스 전략을 명확한 방식으로 수립하고 실행할 수 있으며, 리더, 개발자, 마케팅 담당자 및 기타 직원에게 각자의 환경에서 오픈 소스를 성공적으로 만드는데 필요한 도구를 제공 할 수 있습니다.</h4>
+<h4>이 가이드는 회사 내에서 오픈 소스 사용 및 신설을 관리하는 프로그램을 구축하는 이유와 방법을 파악하는데 도움이 될 뿐만 아니라, 개발자가 회사 밖의 오픈 소스 프로젝트에 어떻게 기여할 수 있는지 보여주기 위해 작성되었습니다. 여기에는 다음과 같은 오픈 소스 사무소에 대한 주제를 다룹니다 : 역할 및 책임, 기업 구조, 오픈 소스 관리 프로그램의 요소, 오픈 소스 프로그램 관리자를 선택하고 고용하는 방법 등</h4>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-4 wpb_column column_container vc_column_container col padding-7-percent instance-3" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="font-size: 24px !important;"><strong>목차</strong></p>
+<ol>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#1">오픈 소스 프로그램 사무소를 만드는 이유</a></li>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#2">오픈 소스 프로그램 사무소의 역할</a></li>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#2.5">예: 구글의 오픈 소스</a></li>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#3">오픈 소스 사무소 설립</a></li>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#4">프로그램 구조</a></li>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#5">관리 역할</a></li>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#6">정책 및 프로세스 설정</a></li>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#7">덧붙이는 말</a></li>
+<li><a style="font-size: 20px !important; line-height: 30px;" href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#8">구인 정보 템플릿</a></li>
+</ol>
+<p><a href="https://www.linuxfoundation.org/resources/open-source-guides/">View All Guides »<br>
+</a><a href="https://github.com/todogroup/guides">Contribute on GitHub »</a></p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2255a" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-2"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding instance-4" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>Contributors to this Guide</h4>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc22873" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-3"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-3 wpb_column column_container vc_column_container col padding-7-percent instance-5 one-fourths clear-both" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><strong><img class="alignnone wp-image-20469" src="./Creating an Open Source Program - The Linux Foundation_files/thumb_cra.png" alt="Chris Aniszczyk" width="100" height="100" srcset="https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_cra.png 150w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_cra-100x100.png 100w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_cra-16x16.png 16w" sizes="(max-width: 100px) 100vw, 100px"><br>
+Chris Aniszczyk</strong><br>
+COO<br>
+Cloud Native Computing Foundation</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding instance-6 one-fourths right-edge" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><strong><img class="alignnone wp-image-20473" src="./Creating an Open Source Program - The Linux Foundation_files/thumb_jeff.png" alt="Jeff McAffer" width="100" height="100" srcset="https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_jeff.png 150w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_jeff-100x100.png 100w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_jeff-16x16.png 16w" sizes="(max-width: 100px) 100vw, 100px"><br>
+Jeff McAffer</strong><br>
+Director, Open Source Programs Office<br>
+Microsoft</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding instance-7 one-fourths clear-both" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><strong><img class="alignnone wp-image-20472" src="./Creating an Open Source Program - The Linux Foundation_files/thumb_will.png" alt="Will Norris" width="100" height="100" srcset="https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_will.png 150w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_will-100x100.png 100w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_will-16x16.png 16w" sizes="(max-width: 100px) 100vw, 100px"><br>
+Will Norris</strong><br>
+Open Source Office Manager<br>
+Google</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-3 wpb_column column_container vc_column_container col padding-7-percent instance-8 one-fourths right-edge" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><strong><img class="alignnone wp-image-20471" src="./Creating an Open Source Program - The Linux Foundation_files/thumb_andrew.png" alt="Andrew Spyker" width="100" height="100" srcset="https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_andrew.png 150w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_andrew-100x100.png 100w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/thumb_andrew-16x16.png 16w" sizes="(max-width: 100px) 100vw, 100px"><br>
+Andrew Spyker</strong><br>
+Container Cloud Manager<br>
+Netflix</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="1" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 100px; padding-bottom: 25px; "><div class="row-bg-wrap instance-4"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-9" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Section 1</p>
+<h3>오픈 소스 프로그램 사무소를 만드는 이유</h3>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc233d8" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 0px; padding-bottom: 25px; "><div class="row-bg-wrap instance-5"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-10" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>오픈 소스 소프트웨어는 오늘날 소매업에서 금융, 자동차 산업에 이르는 광범위한 산업 분야의 기업에서 널리 사용되고 있지만, 경영진 및 의사 결정권자가 항상 완전히 이해하는 것은 아닙니다.</p>
+<p>중요한 문제는 기업이 운영 및 목표를 결정하는데 전통적인 비지니스 계획을 개발하고 따르는 반면, 오픈 소스 소프트웨어는 당황스러울 수 있다는 것입니다. 오픈 소스 혁신은 자체적인 방법론을 가지고 있으며 전통적인 비즈니스 프로세스를 따르지 않습니다. 가장 큰 차이점 중 하나는 오픈 소스 개발은 공동 작업이며, 전통적인 소프트웨어 및 비즈니스 방식은 독점적이며 폐쇄적이라는 것입니다. 많은 기업들이 오픈 소스 사용에 접근 할 때 필요한 철학의 변화는 쉽거나 자연스럽게 이루어지지 않습니다.</p>
+<p>여기가 오픈 소스 프로그램을 만드는 것이 중요한 이점이 될 수 있는 곳입니다. 오픈 소스 프로그램 사무소를 신설함으로, 기업은 회사의 장기 사업 계획에 직접 연계하는 방식으로 오픈 소스 사용을 가능하게하고 합리화 및 조직 할 수 있습니다. 오픈 소스 프로그램 사무소는 회사의 오픈 소스 운영 및 구조를 위한 모든 세상의 중심이되도록 설계되어 필요한 모든 구성 요소를 함께 제공합니다.</p>
+<p>여기에는 코드 사용, 배포, 선택, 감사 및 기타 정책 뿐만 아니라, 개발자 교육, 법적 컴플라이언스 보장, 커뮤니티 참여 촉진 및 구축이 포함될 수 있습니다. 사무소는 또한 회사 내부와 외부의 모든 오픈 소스에 대한 지지와 커뮤니케이션을 제공 할 수 있습니다.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc236c8" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap instance-6"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 light center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-11" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div id="fws_5c0280fc23e38" data-midnight="" data-column-margin="default" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section    " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg   " style=""></div> </div><div class="col span_12  left">
+	<div style="" class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-12" data-using-bg="true" data-shadow="none" data-border-radius="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#264860" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">"오픈 소스 프로그램 사무소는 소프트웨어 생태계의 다양한 부문에 영향을 주고자하는 상당히 야심찬 계획을 가진 모든 현대 회사의 필수적인 부분입니다. 회사가 영향력을 높이거나 오픈 소스 메시징을 명확히하거나 프로젝트의 영향력을 극대화하거나, 제품 개발의 효율성을 높이려면, 오픈 소스 프로그램에 대한 다각적인 접근이 필수적입니다. "</strong></p>
+<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">John Mark Walker<strong> – F</strong>ounder of the&nbsp;Open Source Entrepreneur Network (OSEN)</strong></p>
+
+		</div>
+	</div>
+
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="2" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row full-width-section standard_section   " style="padding: 100px 90px 0px; margin-left: -90px; visibility: visible;"><div class="row-bg-wrap instance-7"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-13" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Section 2</p>
+<h3>The role of the open source program office</h3>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc245fe" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 25px; "><div class="row-bg-wrap instance-8"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-14" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Ultimately, a well-organized open source program office is valuable because it can advance open source use, contribution, and creation inside companies for strategic advantage.</p>
+<p>A successful office can greatly benefit corporate open source use by establishing processes that enable developers and their teams. It encourages standard coding and organizational practices, processes, and toolsets. At the same time, a program office can help avoid or remove unneeded, rigid processes which creative developers may circumvent or ignore anyway, threatening security and other aspects of projects.</p>
+<p>The responsibilities of a program office are varied. These include:</p>
+<ul>
+<li>Clearly communicating the open source strategy within and outside the company</li>
+<li>Owning and overseeing the execution of the strategy</li>
+<li>Facilitating the effective use of open source in commercial products and services</li>
+<li>Ensuring high-quality and frequent releases of code to open source communities</li>
+<li>Engaging with developer communities and seeing that the company contributes back to other projects effectively</li>
+<li>Fostering an open source culture within an organization</li>
+<li>Maintaining open source license compliance reviews and oversight</li>
+</ul>
+<p>For every company, the role of the open source program office will likely be custom-configured, based on its business, products, and goals. There is no broad template for building an open source program that applies across all industries — or even across all companies in a single industry. That can make its creation a challenge, but you can learn lessons from other companies and bring them together to fit your own organization’s requirements.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2496b" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap instance-9"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 light center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-15" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div id="fws_5c0280fc24b5d" data-midnight="" data-column-margin="default" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section    " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg   " style=""></div> </div><div class="col span_12  left">
+	<div style="" class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-16" data-using-bg="true" data-shadow="none" data-border-radius="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#264860" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">“There isn’t a one size fits all model. I can’t stand up in front of a crowd and say, ‘This is how you should do it.'”</strong></p>
+<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;"><a style="color: ##264860;" href="https://twitter.com/jeffmcaffer">Jeff McAffer</a>&nbsp;– Director of the <a style="color: ##264860;" href="https://opensource.microsoft.com/resources/office">Open Source Programs Office</a> at Microsoft</strong></p>
+
+		</div>
+	</div>
+
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc24e56" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 50px; "><div class="row-bg-wrap instance-10"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-17" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Microsoft has been working over the last several years to create and refine its own open source approach. With tens of thousands of employees in a wide range of business units, Microsoft’s dedicated open source program office works to assist developers, marketing teams and others who are engaging with open source for cloud services, hardware and software products, games, content, media, and other product lines. Each division requires different assistance based on its individual business models and engagement scenarios, making it impossible to serve them all with the same offerings.</p>
+<p>A key role for the open source program office is to bring substance and facts to the conversation when business units begin to consider open source in their plans so there is a full understanding of why it is being considered, what the consequences will be, and what is needed to reach its goals. It’s often a matter of framing the conversation so that stakeholders know where to start and what to think about as they weigh their decision.</p>
+<p>The program office can also be a critical liaison between developers and the open source user communities to resolve and understand issues or requirements that arise. The program office can assist with legal issues, provide developer advocacy, and act as a voice for external users who are building on a company’s open source projects. The program office can also help relay that information to others inside the company, including the product management team, to further advance the code. In addition, open source offices are increasingly hiring dedicated developer advocates to focus on making sure that their projects grow and are sustainable.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2511b" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " data-using-ctc="true" style="padding-top: 0px; padding-bottom: 0px; color: #ffffff; "><div class="row-bg-wrap instance-11"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 custom left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding instance-18" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div class="divider-wrap"><div style="margin-top: 12px; width: 500px; height: 1px; margin-bottom: 12px;" data-width="500" data-animate="" data-animation-delay="" data-color="accent-color" class="divider-small-border"></div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc253f4" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 0px; padding-bottom: 50px; "><div class="row-bg-wrap instance-12"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding instance-19" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2>Open Source Program Activities Beyond Development</h2>
+<p style="text-align: center;"><em>&nbsp;<a href="http://www.ibrahimatlinux.com/charts.html">Ibrahim Haddad</a></em></p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2564a" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap instance-13"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-6 wpb_column column_container vc_column_container col no-extra-padding instance-20" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><strong>Relationships / Collaborations</strong></p>
+<ul>
+<li>Linux Foundation</li>
+<li>Open Invention Network</li>
+<li>Software Freedom Law Center</li>
+<li>Mozilla Foundation</li>
+<li>GNOME Foundation</li>
+<li>Free Software Foundation</li>
+<li>Apache Software Foundation</li>
+<li>Software Conservancy Center</li>
+</ul>
+<p><strong>Open Source Legal Compliance</strong></p>
+<ul>
+<li>Manage and support open source compliance process</li>
+<li>Advise on open source compliance</li>
+<li>Help resolve compliance inquiries</li>
+<li>Provide guidelines and checklists</li>
+<li>Track emerging open source legal concerns</li>
+</ul>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-6 wpb_column column_container vc_column_container col no-extra-padding instance-21" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><strong>Strategy, Community, and Engagement</strong></p>
+<ul>
+<li>Develop, maintain, and execute corporate open source strategy and policy</li>
+<li>Internal and external evangelism</li>
+<li>Represent open source views in internal policy discussions</li>
+<li>Launch new open source projects, support releasing internal code</li>
+<li>Sponsor, publish, and speak at open source events</li>
+<li>Organize community events</li>
+<li>Develop and deliver internal open source training</li>
+<li>Provide engineering mentorships to grow internal expertise</li>
+<li>Conduct internal technical workshops</li>
+<li>Advise on community matters</li>
+</ul>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc25b2e" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " data-using-ctc="true" style="padding-top: 25px; padding-bottom: 50px; color: #ffffff; "><div class="row-bg-wrap instance-14"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 custom left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding instance-22" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div class="divider-wrap"><div style="margin-top: 12px; width: 500px; height: 1px; margin-bottom: 12px;" data-width="500" data-animate="" data-animation-delay="" data-color="accent-color" class="divider-small-border"></div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="2.5" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row full-width-section standard_section   " style="padding: 100px 90px; margin-left: -90px; visibility: visible;"><div class="row-bg-wrap instance-15"><div class="inner-wrap"> <div class="row-bg  using-bg-color  " style="background-color: #e0e0e0; " data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-23" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h3 style="margin-bottom: 15px;">예: 구글의 오픈 소스</h3>
+<p>At Google, where the use of open source has been central to its mission and success since the company began in 1998, the role of the open source program office is broad. The office was started in 2004 largely as a compliance effort to understand and organize its use of open source licenses and code, according to Will Norris, the manager of the office. Google was much smaller back then and was involved in a wide range of open source projects and code use, but there weren’t many formal compliance processes in play at that time. As the company continued to grow, that lack of compliance and organization had to change, said Norris, who has worked in the office for four years, originally as a software engineer. He became its manager in September 2016.</p>
+<p>The Google open source program office is run in adherence with three important principles – to help Google employees use open source, to help release open source back to the community and to support the broader open source ecosystem around the world. That mission has remained constant since the creation of the office, which has only about 15 team members who serve a company with about 72,000 employees.</p>
+<p>Much of its efforts to keep the open source ecosystem healthy involve hiring qualified and experienced engineers to work on projects, investing sizable amounts of the company’s money in the open source foundations, groups, and projects that need it, while also regularly sponsoring technology conferences which spread the gospel and usefulness of open source software creation.</p>
+<p>It also means developing and running programs like <a href="https://summerofcode.withgoogle.com/">Google’s Summer of Code</a>, which provides opportunities for students at accredited universities and colleges around the world to spend their summers creating code with help from mentors who provide training and guidance.</p>
+<p>For Google’s open source program office, the Summer of Code is an example of a program which provides direct benefits for its investments – a stream of potential future developers who can one day come to work for the company, armed with experience and some real-world knowledge of how it does open source development. In the open source world, that same strategy can benefit many other companies through similar open source program office investments in the communities in which they participate.</p>
+<p>Most open source community management at Google happens within its many product teams, with the open source program office giving teams and projects support to follow the paths they want to take. The business goals vary for individual projects based on whether it makes sense to open source a project in each case. Some 2,000 to 4,000 open source projects are typically underway at once at Google.</p>
+<p>“We allow the various business units around the company to make the decision on whether it makes sense to open source a given project from a business perspective, because there’s a lot of different reasons why you might open source a project or a piece of code. We’re comfortable with allowing projects to take the approach that works for them given their goals. We play more of a role of facilitating and advising.” – <a href="https://twitter.com/willnorris?lang=en">Will Norris</a>, open source office manager at Google.</p>
+<p>The Google program office is made up of a compliance team which includes two lawyers, an outreach team for event participation and an engineering team that builds tooling to automate compliance checks and support the company’s development programs. Another of its important responsibilities is carefully and constantly tracking a wide range of statistics on open source use, including what needs to be built to be compliant and how long it takes for code to be released or brought in.</p>
+<p>A recent role being taken on by the Google program office is an interesting initiative which is encouraging all workers who are responsible for open source in their primary jobs — whether they are graphics designers, tech writers, marketing people or developers — to spend up to 20 percent of their time to do their specific job for other projects within the company. The idea is to foster more cross-collaboration between teams, which can help them understand each other and improve projects across the board.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="3" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 100px; padding-bottom: 0px; "><div class="row-bg-wrap instance-16"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-24" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Section 3</p>
+<h3>오픈 소스 사무소 설립</h3>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc262a6" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-17"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-25" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>For every company, this is where the individualized decisions begin. The process can start from the top down with buy-in from top management or from the bottom up where pockets of developers have been using open source and want to see it formalized. It can manifest itself as a desire to create guidance around legal issues and security, or it can start as a grassroots effort that matures and attracts the attention of corporate leaders. It can even start with a forward-thinking CEO or CTO who champions the cause to drive the company forward and add value by deepening its commitment to open source. That kind of consensus and executive support will be essential to gain traction and move the project forward.</p>
+<p>So where do you start your open source program office journey? Here are some critical steps to follow:</p>
+<p><strong>1. Find a leader</strong></p>
+<p>Regardless of how your planning starts, it’s important to find the right leader to help develop and then run the fledgling program office inside a company. The top candidate will have a detailed understanding about how open source works, along with some technical chops from working as a developer, contributor, or committer on existing open source projects. They should have a broad understanding of your company’s business along with the business acumen and management skills to help inform strategy and plan across business units. &nbsp;And they also need to be sociable so they can convey enthusiasm, knowledge, and information to others and help them understand how the open source initiative is going to transform, change, and improve things for the company. The head of the program office needs to be able to talk with people about the deep technology, but they don’t have to know the ins and outs of every technology at play because there are just too many to master.</p>
+<p>In the spirit of open source collaboration, a plethora of online resources exists to help find the best candidates, including <a href="https://github.com/todogroup/job-descriptions">detailed sample job description postings</a> for open source program managers and other leaders from a variety of companies that established such roles, including Capital One, Box, VMware, Microsoft, Twitter and Yahoo.</p>
+<p><strong>2. Define your operations.</strong></p>
+<p>The budget, staffing, and technology tools and systems needed by a new program office are also key issues to resolve in establishing its operations. Some companies begin with a part-time manager, but learn they will only get so far with that approach. Making the position someone’s full-time job is a solid step to get the program off the ground, along with a small support staff to keep it nimble.</p>
+<p>If a program office is too large, there’s a danger it can become too centralized. You want to keep developers and open source communities within the company in the process as much as possible. Outsized offices allow others to defer issues to the program office rather than resolving them on their own.</p>
+<p>An example of a well-defined open source program office is one that drives needed policy, processes and tools, while also operating with a mantra of eliminating friction where it is found, using tools to automate what can be streamlined, and delegating tasks which need to be accomplished. We’ll cover more specifics on how to set policies and processes in the sections below.</p>
+<p>A program office must offer structured policies and processes but also remain flexible. When open source users and contributors need help, the office operates more like a consultancy, providing guidance while still allowing employees to make individual or group business decisions relating to their work. Ultimately, the goal is to establish the right balance of duties and responsibilities to meet the needs of your company and its open source users.</p>
+<p><strong>3. Seek feedback and buy-in.</strong></p>
+<p>Establishing an open source program office isn’t something that should be done in a vacuum. Since it will have a central role in your business, creating it successfully will require open and honest input and feedback from all involved parties inside enterprises. Making sure that everyone from the executives to the developers have a say in its creation will help give the the efforts broad-based support.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc26577" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-18"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 light center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-26" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div id="fws_5c0280fc26711" data-midnight="" data-column-margin="default" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section    " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg   " style=""></div> </div><div class="col span_12  left">
+	<div style="" class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-27" data-using-bg="true" data-shadow="none" data-border-radius="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#264860" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">“If your goal is to really get a handle on what your company is doing with open source, in both directions – releasing and bringing it in – it really requires thinking about what are the core things that you really, really care about. Keep your process as streamlined as possible to focus on those things and then on top of that, automate as much as you possibly can.”  </strong></p>
+<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;"><a style="color: ##199ad6;" href="https://twitter.com/willnorris">Will Norris</a>&nbsp;– Open Source Office Manager at Google</strong></p>
+
+		</div>
+	</div>
+
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="4" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 100px; padding-bottom: 0px; "><div class="row-bg-wrap instance-19"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-28" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Section 4</p>
+<h3>Program Structure</h3>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc26c25" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-20"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-29" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>So how and where should open source program offices fit inside a company’s organizational structure? Should it be inside the engineering department? Or in the legal department, the CTO’s office or in another specific business unit? Again, that depends on your company’s primary business and your open source strategy.</p>
+<p><b>Legal</b></p>
+<p>For companies that have large intellectual property portfolios, that could mean the open source program office might be a perfect fit in the legal office, where developers can work closely with the legal team on issues that arise. That might be a good fit for a hardware company because it’s always concerned about potentially running into IP-related legal issues.</p>
+<p><b>Engineering</b></p>
+<p>Other companies are more engineering-driven, so they choose to maintain their open source program offices within their engineering departments. That allows them to focus their efforts directly on making their developers more effective and productive in their work.</p>
+<p><b>Developer Relations, Marketing or Communications</b></p>
+<p>In other cases, some open source offices are located inside the marketing wing of organizations because they use open source to funnel leads aimed at selling the products they build using open source.</p>
+<p>At Twitter, where open source use has been integral to the company’s success, developers were finding it difficult to contribute back to open source projects starting in 2010 because the company’s legal department had serious concerns about code licensing and related issues. Developers and software engineers responded by seeking ways to automate the license compliance processes – to “grease the wheels” – to alleviate the concerns of the legal and engineering departments. The result was the hiring of an open source program manager and the creation of an open source program office to fix processes, streamline procedures, bring in tools to automate tasks and make other needed changes.</p>
+<p>Intriguingly, Netflix took a different approach and chose not to create or use a centralized open source program office, says Andrew Spyker, the manager of the company’s container cloud. Instead, the streaming movie and entertainment company organizes its open source use through a <a href="https://youtu.be/oq__rmr0Qe8">small, cross-functional working group</a> that runs an internal mailing list for discussions and meets informally once a month to help each other resolve open source issues. The volunteer working group members assist other decentralized teams, leaving everyone with less need to focus on administrative tasks such as legal issues, tools, monitoring and community promotion. For Netflix this is a workable approach because it’s an entertainment company and not a software company.</p>
+<p>At Microsoft, the structure of its open source program office, which is inside its engineering department, is unique because it has some 60,000 software engineers to support. That large number of developers required a move away from the idea that the details of all open source projects would have to go through one centralized office, which would have been overwhelmed and unworkable. Instead, for things that can’t be automated, the company’s open source program office team enables engineers to make local decisions about their projects, rather than having to attempt to navigate a centralized bottleneck that could gum up the operations.</p>
+<p>Under its process, Microsoft engineers can go into the company’s open source workflows, share that they want to use a piece of code or release something to an open source community, and then receive responses from local reviewers who provide feedback. The highly specialized process includes about 300 different groups of business and legal reviewers who can weigh in on the localized requests with their expertise, helping to provide a workable approach for the company.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc26f84" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-21"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 light center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-30" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div id="fws_5c0280fc270cd" data-midnight="" data-column-margin="default" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section    " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg   " style=""></div> </div><div class="col span_12  left">
+	<div style="" class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-31" data-using-bg="true" data-shadow="none" data-border-radius="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#264860" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">“If we tried to have a centralized body to approve open source for Windows, Office, and Azure, we would be pulling our hair out. Those are fundamentally different businesses. We give engineers the tools and guidance to enable their work, but are not a central approval body. That works in some companies but would not work here.”</strong></p>
+<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;"><a href="https://twitter.com/jeffmcaffer">Jeff McAffer</a>&nbsp;– Director of the <a style="color: ##264860;" href="https://opensource.microsoft.com/resources/office">Open Source Programs Office</a> at Microsoft</strong></p>
+
+		</div>
+	</div>
+
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="5" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 100px; padding-bottom: 0px; "><div class="row-bg-wrap instance-22"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-32" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Section 5</p>
+<h3>관리 역할</h3>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2781e" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-23"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-33" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>In creating an open source program office, decisions also must be made to establish the roles and responsibilities of the open source program manager, the company’s legal team, and any review board made up of engineers and executives.</p>
+<p><b>Program manager</b></p>
+<p>For maximum effectiveness, the program manager should be empowered as an executive-level position with direct oversight and hands-on management of the company’s interests in its open source activities. That would give them the tools they need to lead the way inside an enterprise toward its open source goals and vision.</p>
+<p>Microsoft uses an Open Source Executive Council, which is similar to a review board. The group, which is made up of vice presidents from all the major business units inside the company, provides board of directors-style guidance on policy changes and introductions, sets priorities for the open source program, and assists in driving changes in behavior.</p>
+<p><b>Legal</b></p>
+<p>Like every other function inside a company, legal teams must have a say in the operations of the open source program office to ensure compliance with laws, open source licensing agreements, and other legal details. Specific to open source, the legal team needs to be responsible for ensuring that a company can consume code internally and contribute back to projects with acceptable terms. Larger organizations should consider hiring or training a dedicated attorney to advise their open source program. But you could also use a part-time, knowledgable staff member or outside counsel. It is often helpful to work with an attorney who is knowledgeable and experienced with open source licensing and IP as it can be a specialized, and at times baffling, legal domain relative to commercial contracts or standards.</p>
+<p><b>Compliance Team</b></p>
+<p>The open source compliance team is a cross-disciplinary group consisting of various individuals tasked with the mission of ensuring open source compliance. The core team, often called the Open Source Review Board (OSRB), consists of representatives from engineering and product teams, one or more legal counsel, and the compliance officer (who is often the open source program manager).</p>
+<p>The extended team consists of various individuals across multiple departments that contribute on an ongoing basis to the compliance efforts. These may include documentation, supply chain, corporate development, IT, localization and an Open Source Executive Committee (OSEC). However, unlike the core team, members of the extended team are only working on compliance on a part-time basis, based on tasks they receive from the OSRB. Samsung program manager Ibrahim Haddad’s book, <a href="https://www.linuxfoundation.org/publications/open-source-compliance-enterprise/">Open Source Compliance in the Enterprise</a>, provides a detailed discussion on the roles and responsibilities of individuals involved in achieving open source compliance.</p>
+<p><b>Developer Relations, Advocacy, and Evangelists</b></p>
+<p>Open source developer relations and evangelists can be important to a fledgling open source program office because they can work to build interest and enthusiasm within a company’s developer community for specific projects, which can help grow the efforts and increase teamwork among engineers. Evangelists oftencan also go to conferences and tech events and explain what open source is to help audiences understand how it can be used and what challenges and opportunities it offers, while sharing their corporate experiences with the open source community.</p>
+<p><b>Others</b></p>
+<p>In addition, the creation of other job roles is important for the success of the open source program office, including tool administrators, training managers, integration developers for tools and systems, deployment support staffers, implementation project leads, and open source evangelists. Tool administrators, for example, are needed to help select, provide and integrate needed tools for engineers working on their open source projects, while also ensuring the tools meet the licensing and other requirements of an enterprise.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="6" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 100px; padding-bottom: 0px; "><div class="row-bg-wrap instance-24"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-34" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Section 6</p>
+<h3>정책 및 프로세스 설정</h3>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc27fc6" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-25"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-35" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>With many of the other important components now planned or assembled for your company’s open source program office, from its creation to its structure to personnel, the next step is to develop well-defined policies and processes which will enable consistent implementation of your company’s open source strategy.</p>
+<p>The policies should lay out the requirements and rules for working with open source across the company, as well as documented and executable processes which will ensure the rules are followed on a day-to-day basis.</p>
+<p>Crucially, they should require minimal overhead. Microsoft looks at its open source program office policies and processes with the goal of making them as unobtrusive as possible for developers and other team members. The approach is to repeatedly eliminate, automate and delegate when reviewing existing open source policies and processes so the rules are constantly questioned and updated to streamline procedures. That means asking why policies are even in place and how they can be improved for users.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2834f" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 25px; padding-bottom: 25px; "><div class="row-bg-wrap instance-26"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 light center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-36" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div id="fws_5c0280fc2851e" data-midnight="" data-column-margin="default" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section    " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg   " style=""></div> </div><div class="col span_12  left">
+	<div style="" class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-37" data-using-bg="true" data-shadow="none" data-border-radius="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#264860" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">“Having a well-defined policy in place, that’s great, but it’s got to be a well-defined minimal policy. Otherwise you get lawyers, security folks, business folks, all piling in their concerns and constraints. Soon you end up with a strait jacket full of policy that basically means that nobody can do anything.”</strong></p>
+<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;"><a href="https://twitter.com/jeffmcaffer">Jeff McAffer</a>&nbsp;– Director of the <a href="https://opensource.microsoft.com/resources/office">Open Source Programs Office</a> at Microsoft</strong></p>
+
+		</div>
+	</div>
+
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2894b" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap instance-27"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-38" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Even as those rules are carefully created for open source program offices, companies must be prepared to evolve and modify the rules and procedures as needed over time as their businesses change and as their open source engagements mature and grow.</p>
+<p>This may sound like yet another daunting step in the process, but like open source code itself, sample rules and processes are available from open source silos and can be implemented and customized by enterprises, making your tasks easier.</p>
+<p>Among the best examples of such rules are from Google, which early in 2017 published its<a href="https://opensource.google.com/docs/"> open source policies</a> for review and free use so others can learn how the company uses, releases and supports open source and how it’s involved in projects and communities. Some of the content is scrubbed for security and privacy reasons, but it provides many lessons learned in how the company does its work.</p>
+<p>When drafting open source policies, among the many topics that need to be discussed are:</p>
+<ul>
+<li>How your company accepts external contributions to their open source projects</li>
+<li>How to prepare for open source releases</li>
+<li>How approvals are received</li>
+<li>How developers can use open source code they find on GitHub and other code repositories</li>
+<li>Procedures and rules explaining how open source code can be brought into your company</li>
+<li>How the incoming code is catalogued so others know it is being used</li>
+<li>How a company can grow a community of like-minded external developers around it to keep it thriving</li>
+<li>Rules that help determine when code should be released as open source or kept as intellectual property</li>
+</ul>
+<p><strong>Policies for releasing code</strong></p>
+<p>You want to help people be successful in making contributions to open source projects and in releasing their own projects. Guidelines and checklists ensure that developers have everything they need to release their code as open source without running into licensing or confidentiality issues. Especially for new contributors, it can also help to have an internal review process available as a safe place to get feedback before making a contribution. (See our guide on <a href="https://www.linuxfoundation.org/resources/open-source-guides/participating-open-source-communities/">Participating in Open Source Communities.</a>)</p>
+<p>Your organization should also strive to adopt an “upstream first” development policy. By submitting patches to the upstream open source project first, and incorporating them into your own products downstream, you will avoid spending a massive amount of time and money on re-engineering after each release.</p>
+<p><strong>Policies for accepting contributions</strong></p>
+<p>Unless your open source projects are housed at a neutral foundation, you’ll want to set out procedures for your company to receive contributions to your own open source projects from external developers.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc28dc0" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 25px; padding-bottom: 25px; "><div class="row-bg-wrap instance-28"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 light center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-39" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div id="fws_5c0280fc28f99" data-midnight="" data-column-margin="default" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section    " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg   " style=""></div> </div><div class="col span_12  left">
+	<div style="" class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-40" data-using-bg="true" data-shadow="none" data-border-radius="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#264860" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">“You actually don’t want to be the only people contributing to your open source project. You want to have people outside your company contribute to your open source project, because at the end of the day, there’s no way to hire all the smartest people in the world. It’s impossible. Even if you’re Google, it’s impossible.”</strong></p>
+<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;"><a href="https://twitter.com/cra?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Chris Aniszczyk</a>&nbsp;– COO of the Cloud Native Computing Foundation and former head of open source programs at Twitter</strong></p>
+
+		</div>
+	</div>
+
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc293b1" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-29"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-41" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>That is, of course, one of the benefits of putting your company’s open source code out into other communities and to inviting other developers to establish an interest in your own projects. Because in the grand scheme of things, even though they are not officially your employees, you can have brilliant people working on your company’s code from around the world, making it better and expanding its capabilities. This kind of collaboration is important for companies and is a common focus for many open source program offices.</p>
+<p><strong>Policies to promote adoption</strong></p>
+<p>You also want to encourage others to use your code in their products and services. This is key to building ecosystems that in turn help grow and sustain your open source projects. Policies for open source use can come in a variety of innovative forms.</p>
+<p>Red Hat has a unique policy by defaulting to open source with its newly-created code in most cases from the start. That means that when developing each piece of software inside the company, it is assumed that in the future it may be destined to be released as open source. This is intriguing because typically there is a different attitude among engineers for releasing their code as open source because other people will then be looking at it. &nbsp;Due to that scrutiny, they tend to structure things in better ways when writing open source, creating cleaner code with fewer or improved code dependencies in their work.</p>
+<p><strong>Policies for internal consumption</strong></p>
+<p>Other needed policies include rules about how and where your team finds trusted sources for open source software use and creation, policies about establishing code management and maintenance procedures, and formalizing community interaction for your projects. (See our guide on<a href="https://www.linuxfoundation.org/resources/open-source-guides/using-open-source-code/"> Using Open Source Code</a>.)</p>
+<p>An open source usage policy ensures that any software (proprietary, third-party, or open source) that makes its way into the product base has been audited, reviewed, and approved. It also ensures that your company has a plan to fulfill the license obligations resulting from using the various software components, before your products make it to customers.</p>
+<p>For example, your policy could require engineers to receive approval from your organization’s auditing staff, such as an open source review board (OSRB), before integrating any open source code in a product. It may also state that software received from third parties must be audited to identify any open source code included, which ensures license obligations can be fulfilled before a product ships.</p>
+<p><strong>Policies for compliance</strong></p>
+<p>Also needed are policies to formalize and establish legal compliance procedures and to assure executive oversight for the program. (See our ebook, <a href="https://www.linuxfoundation.org/publications/open-source-compliance-enterprise/">Open Source Compliance in the Enterprise</a>, for a detailed compliance program.)</p>
+<p>You’ll also want to map out how you’ll handle the software tools that will make much of the compliance and code testing work possible by automating it and streamlining procedures for developers and contributors. For example, the <a href="https://spdx.org/">SPDX</a> and <a href="https://www.openchainproject.org/">OpenChain</a> tools from The Linux Foundation, along with help from your internal supply chain teams, will ensure that code brought in by third parties is also compliant.</p>
+<p>There’s a broad array of open source (e.g. FOSSology) and fee-based proprietary tools in the marketplace today that can help with these important tasks, and for most open source program offices, a quality and comprehensive collection of tools can be brought together without the need to build your own custom tools. Again, much of this is due to the collaboration aspects of the open source process, where contributing developers have created and refined the tools which can handle these tasks for enterprises. And if the tools don’t do exactly what your project needs, then users can contribute back to modify and improve them to gain the capabilities they are seeking. Getting involved in the open source community around enterprise tooling is something that your open source program office will likely support.</p>
+<p>Existing open source resources are also potential gold mines for finding other materials needed by your open source projects, including documentation for contributor license agreements (CLAs). CLAs define the terms under which intellectual property has been contributed to open source software. Projects that use CLAs require contributors and often their company to sign the CLA agreements before contributions will be accepted by the project.</p>
+<p>Many companies have written their own CLAs but there are generic versions that have been created and are available as open source agreements which can be used without starting from scratch. Most of what you will need can be found in a template and then you can customize the CLAs to cover any issues that remain. Attorneys from other potential contributing companies will often appreciate reuse of standard terms.</p>
+<p>Inside Google a variety of tools are used regularly to perform automated code checks using features such as custom filters which can scan code bases to check for licenses, license compatibility, and other factors. Each time Google releases a new Android or other application, it undergoes an automated process for checking license compliance, simplifying procedures for the company. And because it is automated, it makes it easier to make the argument to engineers that the process is simple and seamless and won’t burden them to use for their applications.</p>
+<p>All new Google engineers are also required to go through a one-hour open source class where licensing and compliance are stressed as part of how the company does business. A key lesson shared by the company is that not only is Google obligated by licensing legalese to comply with licenses, but that it also complies because it’s the right thing to do for the community. Google’s lawyers are available to represent the company if an obvious mistake is made in licensing or code use, but the company is very sensitive about potentially submitting code that could harm its standing in the community.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc298b0" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 25px; padding-bottom: 25px; "><div class="row-bg-wrap instance-30"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 light center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-42" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div id="fws_5c0280fc29aa7" data-midnight="" data-column-margin="default" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section    " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg   " style=""></div> </div><div class="col span_12  left">
+	<div style="" class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-43" data-using-bg="true" data-shadow="none" data-border-radius="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#264860" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">“Angering our friends in the open source community would be devastating. It’s not something we would ever want to do because we care about this community, we’re part of it. For companies that are new to open source, I think they often fail to recognize the importance of that.”&nbsp;</strong></p>
+<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;"><a href="https://twitter.com/willnorris?lang=en">Will Norris</a>&nbsp;– Open Source Office Manager at Google</strong></p>
+
+		</div>
+	</div>
+
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="7" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 100px; padding-bottom: 0px; "><div class="row-bg-wrap instance-31"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-44" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Section 7</p>
+<h3>Final Words</h3>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2a06c" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-32"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-7-percent instance-45" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>There’s a lot of work to do and much to consider when your company decides to create an open source program office, but its value will likely outweigh the efforts taken to accomplish it. Finding just the right leader to drive the program office initiative is a critical step in the process to make it a success.</p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2a2fa" data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 25px; padding-bottom: 25px; "><div class="row-bg-wrap instance-33"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 light center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-46" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div id="fws_5c0280fc2a439" data-midnight="" data-column-margin="default" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section    " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg   " style=""></div> </div><div class="col span_12  left">
+	<div style="" class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-5-percent instance-47" data-using-bg="true" data-shadow="none" data-border-radius="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#264860" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+		<div class="wpb_wrapper">
+			
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;">“This is a culture change endeavor. The code is obviously a big part of it, but the community and the engagement is a people-to-people thing. If you’re going to start an open source program office and you’re going to try to make it a real thing, you’re going to need to understand the culture and get somebody in place who can help drive that culture to a new level. Your head of open source is really a change agent.” –  </strong></p>
+<p style="text-align: center;"><strong style="font-size: 20px; line-height: 30px;"><a href="https://twitter.com/jeffmcaffer">Jeff McAffer</a>&nbsp;– Director of the <a href="https://opensource.microsoft.com/resources/office">Open Source Programs Office</a> at Microsoft</strong></p>
+
+		</div>
+	</div>
+
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="8" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 100px; padding-bottom: 50px; "><div class="row-bg-wrap instance-34"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-48" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Section 8</p>
+<h3>Job Listing Template</h3>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2a958" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap instance-35"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-4 wpb_column column_container vc_column_container col no-extra-padding instance-49" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-4 wpb_column column_container vc_column_container col centered-text no-extra-padding instance-50" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><a href="https://www.linuxfoundation.org/wp-content/uploads/2017/08/box_job_3.pdf" target="_blank" rel="noopener"><img class="alignnone wp-image-20591 size-full" src="./Creating an Open Source Program - The Linux Foundation_files/box_job_mini.png" alt="" width="600" height="676" srcset="https://www.linuxfoundation.org/wp-content/uploads/2017/08/box_job_mini.png 600w, https://www.linuxfoundation.org/wp-content/uploads/2017/08/box_job_mini-266x300.png 266w" sizes="(max-width: 600px) 100vw, 600px"></a></p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-4 wpb_column column_container vc_column_container col no-extra-padding instance-51" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2acb8" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 25px; padding-bottom: 0px; "><div class="row-bg-wrap instance-36"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding instance-52" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div class="divider-wrap"><div style="margin-top: 12px; width: 20%px; height: 1px; margin-bottom: 12px;" data-width="20%" data-animate="" data-animation-delay="" data-color="accent-color" class="divider-small-border"></div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2ae6c" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap instance-37"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-10 wpb_column column_container vc_column_container col padding-3-percent instance-53" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>These resources were created in partnership with the TODO (Talk Openly, Develop Openly) Group – the professional open source networking group at The Linux Foundation. A special thanks goes out to the open source program managers who contributed their time and knowledge to making these comprehensive guides. Participating companies include Autodesk, Comcast, Dropbox, Facebook, Google, Intel, Microsoft, Netflix, Oath (Yahoo + AOL), Red Hat, Salesforce, Samsung and VMware. To learn more, visit: <a href="http://todogroup.org/">todogroup.org</a></p>
+<p><em>This work is licensed under a&nbsp;Creative Commons Attribution&nbsp;ShareAlike 4.0 International License.</em></p>
+
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-2 wpb_column column_container vc_column_container col padding-3-percent instance-54" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap " data-max-width="100%" data-border-radius="none"><div class="inner"><a href="http://todogroup.org/" target="_self" class=""><img data-shadow="none" data-shadow-direction="middle" class="img-with-animation " data-delay="0" height="245" width="400" data-animation="fade-in" src="./Creating an Open Source Program - The Linux Foundation_files/logo_todogroup.png" srcset="https://www.linuxfoundation.org/wp-content/uploads/2017/06/logo_todogroup.png 400w, https://www.linuxfoundation.org/wp-content/uploads/2017/06/logo_todogroup-300x184.png 300w" sizes="100vw" alt="TODO Group"></a></div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2bc33" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap instance-38"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding instance-55" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div class="divider-wrap"><div style="margin-top: 12px; width: 20%px; height: 1px; margin-bottom: 12px;" data-width="20%" data-animate="" data-animation-delay="" data-color="accent-color" class="divider-small-border"></div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_5c0280fc2be89" data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap instance-39"><div class="inner-wrap"> <div class="row-bg    " style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-3-percent instance-56" data-border-radius="none" data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<strong>Sign up to get updates!</strong> Be the first to know when we add more open source guides and other content like this.
+
+
+
+<iframe style="border: 0px; opacity: 1; visibility: visible;" src="./Creating an Open Source Program - The Linux Foundation_files/3xb8m2.html" width="100%" height="200" frameborder="0"></iframe>
+		</div>
+	</div>
+
+			</div> 
+		</div>
+	</div> 
+</div></div><!-- AddThis Advanced Settings above via filter on the_content --><!-- AddThis Advanced Settings below via filter on the_content --><!-- AddThis Advanced Settings generic via filter on the_content --><!-- AddThis Share Buttons above via filter on the_content --><!-- AddThis Share Buttons below via filter on the_content -->
+<div class="at-below-post-page addthis_tool" data-url="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/"></div><!-- AddThis Share Buttons generic via filter on the_content -->
+		</div><!--/row-->
+		
+	</div><!--/container-->
+	
+</div><!--/container-wrap-->
+
+
+<div id="footer-outer" data-midnight="light" data-cols="2" data-disable-copyright="false" data-using-bg-img="false" data-bg-img-overlay="0.8" data-full-width="false" data-using-widget-area="false">
+	
+	
+	
+	
+		<div class="row" id="copyright">
+			
+			<div class="container">
+				
+									<div class="col span_5">
+												<p>Copyright © 2018 The Linux Foundation®. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage">Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds.<br> <a href="https://www.linuxfoundation.org/terms/">Terms of Use</a> | <a href="https://www.linuxfoundation.org/privacy/">Privacy Policy</a> | <a href="https://www.linuxfoundation.org/bylaws/">Bylaws</a> | <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage</a> | <a href="https://www.linuxfoundation.org/antitrust-policy/">Antitrust Policy</a> | <a href="https://www.linuxfoundation.org/good-standing-policy/">Good Standing Policy</a></p><!--
+													<p>Copyright © 2018 The Linux Foundation®. All rights reserved. The Linux Foundation はさまざまな商標を登録および使用しています。The Linux Foundation の商標一覧は<a href="https://www.linuxfoundation.jp/trademark-usage/">こちらのページ</a>でご確認いただけます。Linux は Linus Torvalds の登録商標です。<br> <a href="https://www.linuxfoundation.jp/terms/">利用条件</a> | <a href="https://www.linuxfoundation.jp/privacy/">プライバシー</a> | <a href="https://www.linuxfoundation.jp/bylaws/">細則 (英文)</a> | <a href="https://www.linuxfoundation.jp/trademark-usage/">商標</a> | <a href="https://www.linuxfoundation.jp/antitrust-policy/">独占禁止法順守</a> | <a href="https://www.linuxfoundation.jp/good-standing-policy/">Good Standing Policy</a> </p>	
+												-->
+												
+					</div><!--/span_5-->
+								
+				<div class="col span_7 col_last">
+					<ul id="social">
+						 <li><a target="_blank" href="https://twitter.com/linuxfoundation"><i class="fa fa-twitter"></i> </a></li> 						 <li><a target="_blank" href="https://www.facebook.com/TheLinuxFoundation"><i class="fa fa-facebook"></i> </a></li> 																		 <li><a target="_blank" href="https://www.linkedin.com/company/208777"><i class="fa fa-linkedin"></i> </a></li> 						 <li><a target="_blank" href="https://www.youtube.com/user/TheLinuxFoundation"><i class="fa fa-youtube-play"></i> </a></li> 																																				 <li><a target="_blank" href="https://plus.google.com/+LinuxfoundationOrg"><i class="fa fa-google-plus"></i> </a></li> 																																																											</ul>
+				</div><!--/span_7-->
+
+							
+			</div><!--/container-->
+			
+		</div><!--/row-->
+		
+		
+</div><!--/footer-outer-->
+
+
+
+</div><!--/ajax-content-wrap--> 
+
+
+
+	<a id="to-top" class="" style="bottom: -30px;"><i class="fa fa-angle-up"></i></a>
+<div id="cookie-law-info-bar" style="background-color: rgb(10, 59, 97); color: rgb(255, 255, 255); font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif; bottom: 0px; position: fixed; display: block;"><span>This website uses cookies to offer you a better browsing experience. Find out more about <a href="https://www.linuxfoundation.org/cookies" target="blank">how we use cookies and how you can change your settings.</a> <a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program/#" data-cli_action="accept" id="cookie_action_close_header" class="medium cli-plugin-button cli-plugin-main-button cookie_action_close_header cli_action_button" style="color: rgb(255, 255, 255); background-color: rgb(25, 150, 210);">Accept</a><br>
+</span></div><div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<script type="text/javascript">
+  //<![CDATA[
+  cli_cookiebar_settings='{"animate_speed_hide":"500","animate_speed_show":"500","background":"#0a3b61","border":"#0a3b61","border_on":false,"button_1_button_colour":"#1996d2","button_1_button_hover":"#1478a8","button_1_link_colour":"#fff","button_1_as_button":true,"button_1_new_win":false,"button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#000","button_2_as_button":false,"button_3_button_colour":"#dd3333","button_3_button_hover":"#b12929","button_3_link_colour":"#fff","button_3_as_button":true,"button_3_new_win":false,"button_4_button_colour":"#000","button_4_button_hover":"#000000","button_4_link_colour":"#fff","button_4_as_button":true,"font_family":"Lucida Sans Unicode, Lucida Grande, sans-serif","header_fix":false,"notify_animate_hide":true,"notify_animate_show":false,"notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":false,"scroll_close_reload":false,"accept_close_reload":false,"reject_close_reload":false,"showagain_tab":false,"showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#ffffff","show_once_yn":false,"show_once":"10000","logging_on":false,"as_popup":false,"popup_overlay":true,"bar_heading_text":""}';
+  //]]>
+</script>		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script><!-- Google Tag Manager (noscript) --><!-- End Google Tag Manager (noscript) -->
+		
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWBXMJK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};var tribe_system_info = {"sysinfo_optin_nonce":"d1ba10b9f7","clipboard_btn_text":"Copy to clipboard","clipboard_copied_text":"System info copied","clipboard_fail_text":"Press \"Cmd + C\" to copy"};/* ]]> */ </script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/widget.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/position.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/menu.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/wp-a11y.min.js.다운로드"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/autocomplete.min.js.다운로드"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var MyAcSearch = {"url":"https:\/\/www.linuxfoundation.org\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/wpss-search-suggest.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/addthis_widget.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/linux-foundation-public.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/featherlight.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/jquery-ui.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/select2.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/responsive-nav.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/owl.carousel.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/custom.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/modernizr.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/magnific.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/superfish.js.다운로드"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var nectarLove = {"ajaxurl":"https:\/\/www.linuxfoundation.org\/wp-admin\/admin-ajax.php","postID":"20371","rooturl":"https:\/\/www.linuxfoundation.org","pluginPages":[],"disqusComments":"false","loveNonce":"248e6cea64","mapApiKey":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/init.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/touchswipe.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/vivus.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/wp-embed.min.js.다운로드"></script>
+<script type="text/javascript" src="./Creating an Open Source Program - The Linux Foundation_files/js_composer_front.min.js.다운로드"></script>
+	
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c1e441369e","applicationID":"65615538","transactionName":"bgAGYkYHCEcEUEILVldKJVVADwlaSkNXBVw=","queueTime":0,"applicationTime":2137,"atts":"QkcFFA4dG0k=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<div id="wp-a11y-speak-polite" aria-live="polite" aria-relevant="additions text" aria-atomic="true" class="screen-reader-text wp-a11y-speak-region"></div><div id="wp-a11y-speak-assertive" aria-live="assertive" aria-relevant="additions text" aria-atomic="true" class="screen-reader-text wp-a11y-speak-region"></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Creating an Open Source Program - The Linux Foundation_files/widget_iframe.0568ee90c37ccf52b40a4b1e312811ff.html" title="Twitter settings iframe" style="display: none; opacity: 1;"></iframe><div class="addthis-smartlayers addthis-smartlayers-desktop" aria-labelledby="at4-share-label" role="region"><div id="at4-share-label">AddThis Sharing Sidebar</div><div id="at4-share" class="at4-share addthis_32x32_style atss atss-left addthis-animated slideInLeft"><a role="button" tabindex="1" class="at-share-btn at-svc-linkedin"><span class="at4-visually-hidden">Share to LinkedIn</span><span class="at-icon-wrapper" style="background-color: rgb(0, 119, 181);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-linkedin-1" class="at-icon at-icon-linkedin" style="fill: rgb(255, 255, 255);"><title id="at-svg-linkedin-1">LinkedIn</title><g><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="1" class="at-share-btn at-svc-twitter"><span class="at4-visually-hidden">Share to Twitter</span><span class="at-icon-wrapper" style="background-color: rgb(29, 161, 242);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-twitter-2" class="at-icon at-icon-twitter" style="fill: rgb(255, 255, 255);"><title id="at-svg-twitter-2">Twitter</title><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="1" class="at-share-btn at-svc-facebook"><span class="at4-visually-hidden">Share to Facebook</span><span class="at-icon-wrapper" style="background-color: rgb(59, 89, 152);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-3" class="at-icon at-icon-facebook" style="fill: rgb(255, 255, 255);"><title id="at-svg-facebook-3">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="1" class="at-share-btn at-svc-google_plusone_share"><span class="at4-visually-hidden">Share to Google+</span><span class="at-icon-wrapper" style="background-color: rgb(220, 78, 65);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-google_plusone_share-4" class="at-icon at-icon-google_plusone_share" style="fill: rgb(255, 255, 255);"><title id="at-svg-google_plusone_share-4">Google+</title><g><path d="M12 15v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42s1.95-4.42 4.34-4.42c1.36 0 2.27.58 2.79 1.08l1.9-1.83C15.47 9.69 13.89 9 12 9c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H12zm15 0h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="1" class="at-share-btn at-svc-email"><span class="at4-visually-hidden">Share to Email</span><span class="at-icon-wrapper" style="background-color: rgb(132, 132, 132);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-email-5" class="at-icon at-icon-email" style="fill: rgb(255, 255, 255);"><title id="at-svg-email-5">Email</title><g><g fill-rule="evenodd"></g><path d="M27 22.757c0 1.24-.988 2.243-2.19 2.243H7.19C5.98 25 5 23.994 5 22.757V13.67c0-.556.39-.773.855-.496l8.78 5.238c.782.467 1.95.467 2.73 0l8.78-5.238c.472-.28.855-.063.855.495v9.087z"></path><path d="M27 9.243C27 8.006 26.02 7 24.81 7H7.19C5.988 7 5 8.004 5 9.243v.465c0 .554.385 1.232.857 1.514l9.61 5.733c.267.16.8.16 1.067 0l9.61-5.733c.473-.283.856-.96.856-1.514v-.465z"></path></g></svg></span></a><div id="at4-scc" class="at-share-close-control ats-transparent at4-show at4-hide-content" title="Hide"><div class="at4-arrow at-left">Hide</div></div></div><div id="at4-soc" class="at-share-open-control at-share-open-control-left ats-transparent at4-hide" title="Show"><div class="at4-arrow at-right">Show</div></div></div><div id="at4-thankyou" class="at4-thankyou at4-thankyou-background at4-hide ats-transparent at4-thankyou-desktop addthis-smartlayers addthis-animated fadeIn at4-show" role="dialog" aria-labelledby="at-thankyou-label"><div class="at4lb-inner"><button class="at4x" title="Close">Close</button><a id="at4-palogo"></a><div><a class="at-branding-logo" href="https://www.addthis.com/website-tools/overview?utm_source=AddThis%20Tools&amp;utm_medium=image" title="Powered by AddThis" target="_blank"></a><div class="at-branding-icon"></div><span class="at-branding-addthis">AddThis</span></a></div></a><div class="at4-thankyou-inner"><div id="at-thankyou-label" class="thankyou-title"></div><div class="thankyou-description"></div><div class="at4-thankyou-layer"></div></div></div></div><div class="at-share-dock-outer addthis-smartlayers at4-visually-hidden addthis-smartlayers-mobile at4-hide" aria-labelledby="at-share-dock-label" role="region"><div id="at-share-dock-label" class="at4-hide">AddThis Sharing</div><div id="at-share-dock" class="at-share-dock atss atss-bottom at-shfs-small addthis-animated slideInUp at4-hide"><a role="button" tabindex="1" title="LinkedIn" class="at-share-btn at-svc-linkedin" style="width: 20%;"><span class="at-icon-wrapper" style="background-color: rgb(0, 119, 181);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-linkedin-6" title="LinkedIn" alt="LinkedIn" style="fill: rgb(255, 255, 255); width: 24px; height: 24px;" class="at-icon at-icon-linkedin"><title id="at-svg-linkedin-6">LinkedIn</title><g><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="1" title="Twitter" class="at-share-btn at-svc-twitter" style="width: 20%;"><span class="at-icon-wrapper" style="background-color: rgb(29, 161, 242);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-twitter-7" title="Twitter" alt="Twitter" style="fill: rgb(255, 255, 255); width: 24px; height: 24px;" class="at-icon at-icon-twitter"><title id="at-svg-twitter-7">Twitter</title><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="1" title="Facebook" class="at-share-btn at-svc-facebook" style="width: 20%;"><span class="at-icon-wrapper" style="background-color: rgb(59, 89, 152);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-8" title="Facebook" alt="Facebook" style="fill: rgb(255, 255, 255); width: 24px; height: 24px;" class="at-icon at-icon-facebook"><title id="at-svg-facebook-8">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="1" title="Google+" class="at-share-btn at-svc-google_plusone_share" style="width: 20%;"><span class="at-icon-wrapper" style="background-color: rgb(220, 78, 65);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-google_plusone_share-9" title="Google+" alt="Google+" style="fill: rgb(255, 255, 255); width: 24px; height: 24px;" class="at-icon at-icon-google_plusone_share"><title id="at-svg-google_plusone_share-9">Google+</title><g><path d="M12 15v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42s1.95-4.42 4.34-4.42c1.36 0 2.27.58 2.79 1.08l1.9-1.83C15.47 9.69 13.89 9 12 9c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H12zm15 0h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="1" title="Email" class="at-share-btn at-svc-email" style="width: 20%;"><span class="at-icon-wrapper" style="background-color: rgb(132, 132, 132);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-email-10" title="Email" alt="Email" style="fill: rgb(255, 255, 255); width: 24px; height: 24px;" class="at-icon at-icon-email"><title id="at-svg-email-10">Email</title><g><g fill-rule="evenodd"></g><path d="M27 22.757c0 1.24-.988 2.243-2.19 2.243H7.19C5.98 25 5 23.994 5 22.757V13.67c0-.556.39-.773.855-.496l8.78 5.238c.782.467 1.95.467 2.73 0l8.78-5.238c.472-.28.855-.063.855.495v9.087z"></path><path d="M27 9.243C27 8.006 26.02 7 24.81 7H7.19C5.988 7 5 8.004 5 9.243v.465c0 .554.385 1.232.857 1.514l9.61 5.733c.267.16.8.16 1.067 0l9.61-5.733c.473-.283.856-.96.856-1.514v-.465z"></path></g></svg></span></a></div></div></body></html>

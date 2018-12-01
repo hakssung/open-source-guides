@@ -1,0 +1,45 @@
+.single-webinar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,#444,#000);
+    opacity: .4;
+    z-index: -1;
+}
+
+.single-webinar { 
+  padding: 0 20px; 
+  color: #fff;
+}
+
+.single-webinar h2 { 
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.single-webinar .nectar-button.small {
+  color: #fff !important;
+  border-color: #fff !important;
+  font-weight: bold !important;
+  font-size: 15px;
+}
+
+.single-webinar .nectar-button.small.see-through-2:hover {
+  border:2px solid #fff !important;
+  border-color: #fff !important;
+  color: #000 !important;
+  background: #fff !important;
+}
+
+.single-webinar .featherlight .featherlight-content {
+  overflow: initial;
+}
+
+.single-webinar .webinar-readmore {
+  padding-top: 5px;
+}

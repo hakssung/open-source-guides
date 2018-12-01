@@ -1,0 +1,9 @@
+/* Projects CSS */
+.single-project { margin-bottom: 20px; text-align: center }
+.single-project-icon { text-align: center; }
+.single-project-icon img { text-align: center; max-width: 200px !important; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transition: .3s ease-in-out; transition: .3s ease-in-out; }
+.single-project-icon img:hover { -webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1) !important; }
+.single-project .inner .single-project-icon { height: 70px !important; width: auto !important; }
+.single-project-lightbox h3 { font-size: 30px !important; line-height: 32px !important; }
+.single-project-lightbox h5 { font-size: 18px !important; line-height: 20px !important; font-weight: 300 !important }
+.single-project-lightbox h6 { font-size: 15px !important; line-height: 17px !important; margin-bottom: 20px; }

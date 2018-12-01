@@ -1,0 +1,6 @@
+/* Persons CSS */
+.single-person { margin-bottom: 20px; }
+.single-person-header h5 { font-size: 18px !important; line-height: 22px !important; }
+.single-person-header h6 { font-size: 13px !important; line-height: 15px !important; font-weight: 100 !important; }
+.single-person-icon { width: 100px !important; height: 100px !important; border: 3px solid #fff; border-radius: 50px; }
+.single-person-description p { font-size: 15px !important }

@@ -1,0 +1,14 @@
+Open Source Program	오픈 소스 프로그램
+company	회사
+Open Source Guide	오픈 소스 가이드
+office	사무소
+open source	오픈 소스
+Setting	설정
+template	템플릿
+Job listing	구인 정보
+business	비지니스
+process	프로세스
+distribution	배포
+audit	감사
+community	커뮤니티
+compliance	컴플라이언스
